@@ -168,11 +168,51 @@ def build(base_url='',repo_url=''):
         return '<a class="skip" href="#main">跳转到正文</a><header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html"><span class="brandmark" aria-hidden="true">A</span><span><strong>AI 酋长 Andy</strong><small>GLOBAL CAREER FIELD GUIDE</small></span></a><button class="menu" data-menu aria-expanded="false" aria-controls="main-nav">导航</button><nav class="nav" id="main-nav" aria-label="主导航"><a href="index.html#start">从这里开始</a><a href="contents.html">完整攻略</a><a href="index.html#regions">地区导航</a><a href="downloads.html">免费资源</a><a href="sources.html">来源与核验</a></nav></div></header>'
     def footer():
         repo=f'<a href="{E(repo_url,quote=True)}">GitHub 开源仓库</a>' if repo_url else '<span>GitHub 发布状态见交付说明</span>'
-        return '<footer class="footer"><div>© 2026 AI 酋长 Andy · '+VERSION+'</div><div class="footer-links"><a href="coverage.html">覆盖范围与缺口</a><a href="downloads.html">源文件与模板</a>'+repo+'<a href="index.html#about">关于作者</a></div></footer>'
+        return '<footer class="footer"><div>© 2026 AI 酋长 Andy · '+VERSION+'</div><div class="footer-links"><a href="coverage.html">覆盖范围与缺口</a><a href="downloads.html">源文件与模板</a>'+repo+'<a href="https://metaver.vip/services">咨询与陪跑</a><a href="https://metaver.vip/">个人官网</a><a href="https://www.a6no1.cn/">公司官网</a><a href="index.html#about">关于作者</a></div></footer>'
     def save(url,title,body,description='',article=False):
-        canonical=f'<link rel="canonical" href="{E(base_url.rstrip("/")+"/"+url,quote=True)}">' if base_url else ''
-        doc='<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fbfbf8"><title>'+E(title)+' | AI 酋长 Andy</title><meta name="description" content="'+E(description or '面向中国留学生的跨地区求职路线、招聘窗口、资格核验、申请材料与可编辑模板。',quote=True)+'">'+canonical+'<link rel="stylesheet" href="assets/style.css"><script src="assets/app.js" defer></script></head><body>'+header()+'<main id="main">'+body+'</main>'+footer()+'</body></html>'
-        (OUT/url).write_text(doc,'utf-8')
+        # SEO and JSON-LD are derived from the same source as the rendered page.
+        description = description or '面向中国留学生的跨地区求职路线、招聘窗口、资格核验、申请材料与可编辑模板。'
+        site_root = base_url.rstrip('/') + '/' if base_url else ''
+        public_url = site_root + ('' if url == 'index.html' else url) if site_root else ''
+        page_title = title + ' | AI 酋长 Andy'
+        canonical = '<link rel="canonical" href="' + E(public_url, quote=True) + '">' if public_url else ''
+        social = ''
+        structured = ''
+        if public_url:
+            social = (
+                '<meta property="og:type" content="' + ('article' if article else 'website') + '">'
+                '<meta property="og:site_name" content="' + E(TITLE, quote=True) + '">'
+                '<meta property="og:locale" content="zh_CN">'
+                '<meta property="og:title" content="' + E(page_title, quote=True) + '">'
+                '<meta property="og:description" content="' + E(description, quote=True) + '">'
+                '<meta property="og:url" content="' + E(public_url, quote=True) + '">'
+                '<meta name="twitter:card" content="summary">'
+            )
+            schema = {
+                '@context': 'https://schema.org',
+                '@type': 'WebPage',
+                'name': title,
+                'description': description,
+                'url': public_url,
+                'inLanguage': 'zh-CN',
+                'dateModified': VERSION,
+                'isPartOf': {'@type': 'WebSite', 'name': TITLE, 'url': site_root},
+                'author': {'@type': 'Person', 'name': 'AI 酋长 Andy', 'url': 'https://metaver.vip/'},
+                'publisher': {'@type': 'Organization', 'name': '星觉科技', 'url': 'https://www.a6no1.cn/'}
+            }
+            structured = '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
+        doc = (
+            '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<meta name="theme-color" content="#fbfbf8">'
+            '<title>' + E(page_title) + '</title>'
+            '<meta name="description" content="' + E(description, quote=True) + '">'
+            + canonical + social + structured +
+            '<link rel="stylesheet" href="assets/style.css">'
+            '<script src="assets/app.js" defer></script></head><body>'
+            + header() + '<main id="main">' + body + '</main>' + footer() + '</body></html>'
+        )
+        (OUT/url).write_text(doc, 'utf-8')
     def heading(title,sub,kicker='FIELD GUIDE'):
         return '<div class="page-heading"><div class="breadcrumb"><a href="index.html">首页</a> / '+E(title)+'</div><div class="kicker">'+E(kicker)+'</div><h1>'+E(title)+'</h1><p>'+sub+'</p></div>'
     def list_chapters(items):
@@ -251,10 +291,10 @@ def build(base_url='',repo_url=''):
     # A static machine-readable manifest for offline validation and future maintenance.
     manifest={'version':VERSION,'title':TITLE,'core_pages':len(core),'region_pages':region_article_count,'region_navigation_count':len(regions),'pending_navigation_count':pending_navigation_count,'template_pages':len(templatepages),'source_count':len(sources),'pages':[{'title':p['title'],'url':p['url'],'kind':p['kind']} for p in pages]}
     (OUT/'site-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n','utf-8')
-    (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\n','utf-8')
+    (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\n' + ('Sitemap: ' + base_url.rstrip('/') + '/sitemap.xml\n' if base_url else ''),'utf-8')
     if base_url:
         urls=['index.html','contents.html','downloads.html','sources.html','coverage.html']+[p['url'] for p in pages]+['stage-'+s[0]+'.html' for s in stage_defs]
-        sitemap='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+E(base_url.rstrip('/')+'/'+u)+'</loc><lastmod>'+VERSION+'</lastmod></url>' for u in urls)+'</urlset>'
+        sitemap='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+E(base_url.rstrip('/')+'/' + ('' if u == 'index.html' else u))+'</loc><lastmod>'+VERSION+'</lastmod></url>' for u in urls)+'</urlset>'
         (OUT/'sitemap.xml').write_text(sitemap,'utf-8')
     print(json.dumps(manifest,ensure_ascii=False))
 
