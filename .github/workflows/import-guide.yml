@@ -1,0 +1,101 @@
+name: Import complete career handbook
+on:
+  push:
+    paths: ['.github/workflows/import-guide.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: import-career-handbook
+  cancel-in-progress: false
+jobs:
+  import:
+    if: github.repository == 'AIPMAndy/chinese-international-student-career-guide' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Refuse to overwrite an already imported handbook
+        run: test ! -f docs/GITHUB-IMPORT.json
+      - name: Recover and verify the exact original source snapshot
+        shell: python
+        run: |
+          import hashlib, io, pathlib, stat, urllib.request, zipfile
+          url = 'https://andy-student-career-guide.andyaipm.chatgpt.site/downloads/source-code.zip'
+          expected = 'f13ccda6eb57b827087635ee474694d10f62a8983628c7a3f0ada6403e93f646'
+          request = urllib.request.Request(url, headers={'User-Agent': 'Andy-authorized-source-migration/1.0'})
+          with urllib.request.urlopen(request, timeout=60) as response:
+              data = response.read(20_000_001)
+          assert len(data) < 20_000_000 and hashlib.sha256(data).hexdigest() == expected, 'Source snapshot changed; review required'
+          root = pathlib.Path.cwd()
+          with zipfile.ZipFile(io.BytesIO(data)) as z:
+              for item in z.infolist():
+                  path = pathlib.PurePosixPath(item.filename)
+                  assert not path.is_absolute() and '..' not in path.parts
+                  assert path.parts[0] == 'chinese-international-student-career-guide'
+                  relative = pathlib.Path(*path.parts[1:])
+                  if not relative.parts or item.is_dir() or relative.parts[0] == '.github': continue
+                  assert not any(part in {'.git', '.openai', '.ssh', 'node_modules'} or part.startswith('.env') for part in relative.parts)
+                  assert not stat.S_ISLNK(item.external_attr >> 16)
+                  target = root / relative
+                  assert not target.exists(), f'Existing file requires reconciliation: {relative}'
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(z.read(item))
+          for path in root.rglob('*'):
+              if not path.is_file() or '.git' in path.parts or path.suffix not in {'.py','.md','.json','.html','.css','.js','.txt'}: continue
+              text = path.read_text(encoding='utf-8')
+              text = text.replace('https://andy-student-career-guide.andyaipm.chatgpt.site', 'https://aipmandy.github.io/chinese-international-student-career-guide')
+              path.write_text(text, encoding='utf-8')
+          checker = 'https://raw.githubusercontent.com/AIPMAndy/chinese-international-student-product-jobs/4d1f8923a4a2ee8527838ae9e468bffa3e313b6f/tools/check_pages_links.py'
+          with urllib.request.urlopen(checker, timeout=45) as response: code = response.read()
+          assert hashlib.sha1(b'blob ' + str(len(code)).encode() + b'\0' + code).hexdigest() == 'fb044671ac39b3b48d7b3b05a61ded5dcea1bf19'
+          pathlib.Path('scripts/check_pages_links.py').write_bytes(code)
+      - name: Install PDF build dependencies
+        run: python3 -m pip install 'reportlab>=4,<5' 'fonttools>=4,<5' 'PyMuPDF>=1.24,<2'
+      - name: Rebuild the complete PDF with the GitHub Pages address
+        run: python3 scripts/build_pdf.py
+      - name: Keep fonts out of repository and distributed archives
+        shell: python
+        run: |
+          from pathlib import Path
+          for path in Path('.').rglob('*'):
+              if path.is_file() and path.suffix.lower() in {'.ttf','.otf','.ttc','.woff','.woff2'}: path.unlink()
+          with Path('.gitignore').open('a') as f: f.write('\n*.ttf\n*.otf\n*.ttc\n*.woff\n*.woff2\n')
+          readme = Path('assets/fonts/README.md')
+          readme.write_text('# PDF build fonts\n\nFont binaries are not distributed. To rebuild the PDF, obtain NotoSansSC-VF.ttf from the official notofonts/noto-cjk project and run `python3 scripts/build_pdf.py --font-source /path/to/NotoSansSC-VF.ttf`. Temporary subsets stay local. The published PDF already embeds the glyphs it needs. See OFL.txt for upstream licensing.\n')
+      - name: Package editable templates and rebuild all static pages
+        run: |
+          python3 scripts/package_release.py
+          python3 scripts/build_site.py --base-url https://aipmandy.github.io/chinese-international-student-career-guide --repo-url https://github.com/AIPMAndy/chinese-international-student-career-guide
+          python3 scripts/check_pages_links.py --require downloads/chinese-international-student-career-guide.pdf --require downloads/source-code.zip --require downloads/editable-templates.zip --require templates/career-workbook.xlsx
+      - name: Record exact artifacts and inspect PDF structure
+        shell: python
+        run: |
+          import hashlib, json, pathlib, fitz
+          pdf = pathlib.Path('downloads/chinese-international-student-career-guide.pdf')
+          document = fitz.open(pdf)
+          assert len(document) >= 70
+          text = ''.join(page.get_text() for page in document)
+          assert 'AIPMAndy' in text and 'metaver.vip' in text
+          files = []
+          for path in sorted(pathlib.Path('dist').rglob('*')):
+              if path.is_file(): files.append({'path':str(path),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
+          report = {'source_sha256':'f13ccda6eb57b827087635ee474694d10f62a8983628c7a3f0ada6403e93f646','repository':'AIPMAndy/chinese-international-student-career-guide','pdf_pages':len(document),'html_pages':len(list(pathlib.Path('dist').rglob('*.html'))),'pages_deployment':'pending; successful import is not a live-site verification','files':files}
+          pathlib.Path('docs/GITHUB-IMPORT.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+      - name: Commit the complete handbook without overwriting concurrent changes
+        run: |
+          git config user.name 'AI酋长Andy'
+          git config user.email '31501333+AIPMAndy@users.noreply.github.com'
+          git add --all
+          test -z "$(git diff --cached --name-only -- .github/workflows)"
+          git commit -m 'Publish full career guide with 81-page PDF, editable templates and GitHub Pages site'
+          git push origin HEAD:main
+          git rev-parse HEAD
+      - name: Preserve PDF and import evidence for visual review
+        uses: actions/upload-artifact@v4
+        with:
+          name: career-published-evidence
+          path: |
+            downloads/chinese-international-student-career-guide.pdf
+            docs/GITHUB-IMPORT.json
+          retention-days: 3
