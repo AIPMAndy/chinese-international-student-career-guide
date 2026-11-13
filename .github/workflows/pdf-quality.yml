@@ -1,0 +1,36 @@
+name: Verify released career guide PDF
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pdf-quality.yml'
+      - 'downloads/chinese-international-student-career-guide.pdf'
+      - 'scripts/validate_pdf.py'
+      - 'docs/font-coverage.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pdf-quality:
+    if: github.repository == 'AIPMAndy/chinese-international-student-career-guide'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Install PDF inspection and rendering dependencies
+        run: python3 -m pip install -r requirements-pdf.txt
+      - name: Audit current PDF structure, contacts, links and render all pages
+        run: python3 scripts/validate_pdf.py --render
+      - name: Preserve current binary, machine QA and page contact sheets
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-audit-${{ github.sha }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            docs/pdf-validation.json
+            downloads/chinese-international-student-career-guide.pdf
+            tmp/pdfs/final/pair-*.jpg
