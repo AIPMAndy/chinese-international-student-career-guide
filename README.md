@@ -126,7 +126,7 @@ python3 website/check_links.py
 python3 -m http.server 8000 --directory dist
 ```
 
-然后打开 `http://127.0.0.1:8000/`。完整复现、PDF、工作簿、GitHub 首次发布和可选 GitHub Pages 部署见[构建与发布文档](docs/build-and-publish.md)。
+然后打开 `http://127.0.0.1:8000/`。完整复现、PDF、工作簿、GitHub 更新与 GitHub Pages 部署见[构建与发布文档](docs/build-and-publish.md)。
 
 欢迎按[贡献规范](CONTRIBUTING.md)补充地区与纠错。提交政策改动时，应同时给出地区、申请人类别、官方原文、发布日期或生效日期（如有）、本次核验日期、结论与已知例外。发现冲突应保留冲突，无法确认时降为待核验。
 
