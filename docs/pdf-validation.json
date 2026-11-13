@@ -1,0 +1,462 @@
+{
+  "checked_at": "2026-11-13",
+  "filename": "chinese-international-student-career-guide.pdf",
+  "sha256": "f1f3a332d24505b198222a7186694e9aff633285d58557316e4cb6ce38f4201f",
+  "pages": 81,
+  "bookmarks": 50,
+  "internal_links": 122,
+  "external_links": 191,
+  "fonts_used": [
+    "AndyCareerSans-Bold",
+    "AndyCareerSans-Regular"
+  ],
+  "embedded_fonts": {
+    "AAAAAB+AndyCareerSans-Regular": {
+      "format": "ttf",
+      "bytes": 63868
+    },
+    "AAAAAC+AndyCareerSans-Regular": {
+      "format": "ttf",
+      "bytes": 67824
+    },
+    "AAAAAD+AndyCareerSans-Regular": {
+      "format": "ttf",
+      "bytes": 73080
+    },
+    "AAAAAE+AndyCareerSans-Regular": {
+      "format": "ttf",
+      "bytes": 48416
+    },
+    "AAAAAA+AndyCareerSans-Bold": {
+      "format": "ttf",
+      "bytes": 45216
+    },
+    "AAAAAB+AndyCareerSans-Bold": {
+      "format": "ttf",
+      "bytes": 66392
+    },
+    "AAAAAC+AndyCareerSans-Bold": {
+      "format": "ttf",
+      "bytes": 21692
+    },
+    "AAAAAA+AndyCareerSans-Regular": {
+      "format": "ttf",
+      "bytes": 48828
+    }
+  },
+  "font_coverage": {
+    "checked_at": "2026-11-13",
+    "characters": 1209,
+    "unsupported": ""
+  },
+  "all_pages_rendered": true,
+  "errors": [],
+  "pages_detail": [
+    {
+      "page": 1,
+      "characters": 251,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 2,
+      "characters": 6190,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 3,
+      "characters": 3896,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 4,
+      "characters": 451,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 5,
+      "characters": 975,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 6,
+      "characters": 1012,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 7,
+      "characters": 934,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 8,
+      "characters": 896,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 9,
+      "characters": 843,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 10,
+      "characters": 1366,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 11,
+      "characters": 740,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 12,
+      "characters": 974,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 13,
+      "characters": 952,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 14,
+      "characters": 583,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 15,
+      "characters": 981,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 16,
+      "characters": 1014,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 17,
+      "characters": 543,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 18,
+      "characters": 1005,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 19,
+      "characters": 986,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 20,
+      "characters": 416,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 21,
+      "characters": 1081,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 22,
+      "characters": 1197,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 23,
+      "characters": 875,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 24,
+      "characters": 614,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 25,
+      "characters": 549,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 26,
+      "characters": 650,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 27,
+      "characters": 1079,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 28,
+      "characters": 1031,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 29,
+      "characters": 1319,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 30,
+      "characters": 1331,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 31,
+      "characters": 1314,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 32,
+      "characters": 1309,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 33,
+      "characters": 1271,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 34,
+      "characters": 1234,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 35,
+      "characters": 1239,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 36,
+      "characters": 1220,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 37,
+      "characters": 1114,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 38,
+      "characters": 1172,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 39,
+      "characters": 1139,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 40,
+      "characters": 1429,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 41,
+      "characters": 888,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 42,
+      "characters": 965,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 43,
+      "characters": 1302,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 44,
+      "characters": 970,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 45,
+      "characters": 1276,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 46,
+      "characters": 1055,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 47,
+      "characters": 975,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 48,
+      "characters": 1445,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 49,
+      "characters": 1373,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 50,
+      "characters": 301,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 51,
+      "characters": 296,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 52,
+      "characters": 307,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 53,
+      "characters": 296,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 54,
+      "characters": 293,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 55,
+      "characters": 302,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 56,
+      "characters": 279,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 57,
+      "characters": 322,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 58,
+      "characters": 1777,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 59,
+      "characters": 1759,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 60,
+      "characters": 1972,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 61,
+      "characters": 1100,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 62,
+      "characters": 642,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 63,
+      "characters": 526,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 64,
+      "characters": 1366,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 65,
+      "characters": 1598,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 66,
+      "characters": 277,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 67,
+      "characters": 972,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 68,
+      "characters": 853,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 69,
+      "characters": 1036,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 70,
+      "characters": 1341,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 71,
+      "characters": 1289,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 72,
+      "characters": 1528,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 73,
+      "characters": 1192,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 74,
+      "characters": 1370,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 75,
+      "characters": 1490,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 76,
+      "characters": 1497,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 77,
+      "characters": 1330,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 78,
+      "characters": 1264,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 79,
+      "characters": 1294,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 80,
+      "characters": 397,
+      "outside_page_spans": 0
+    },
+    {
+      "page": 81,
+      "characters": 436,
+      "outside_page_spans": 0
+    }
+  ],
+  "scope": "Automated structure, links, extracted text bounds and font checks. Human per-page layout review is recorded separately."
+}

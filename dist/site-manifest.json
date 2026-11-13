@@ -1,0 +1,217 @@
+{
+  "version": "2026-11-13",
+  "title": "中国留学生求职全局保姆级攻略",
+  "core_pages": 16,
+  "region_pages": 21,
+  "region_navigation_count": 41,
+  "pending_navigation_count": 20,
+  "template_pages": 5,
+  "source_count": 90,
+  "pages": [
+    {
+      "title": "从你现在的位置开始",
+      "url": "guide-00-start.html",
+      "kind": "core"
+    },
+    {
+      "title": "留当地、去第三地，还是回国",
+      "url": "guide-01-routes.html",
+      "kind": "core"
+    },
+    {
+      "title": "把四个时钟放进一张时间表",
+      "url": "guide-02-calendar.html",
+      "kind": "core"
+    },
+    {
+      "title": "逐行读招聘原文，先过资格关",
+      "url": "guide-03-eligibility.html",
+      "kind": "core"
+    },
+    {
+      "title": "选岗位：从能力证据到目标清单",
+      "url": "guide-04-target-role.html",
+      "kind": "core"
+    },
+    {
+      "title": "用好学校、校友、官网与招聘活动",
+      "url": "guide-05-resources.html",
+      "kind": "core"
+    },
+    {
+      "title": "中英文材料：一套事实，多种表达",
+      "url": "guide-06-materials.html",
+      "kind": "core"
+    },
+    {
+      "title": "投递、跟进与卡点诊断",
+      "url": "guide-07-application.html",
+      "kind": "core"
+    },
+    {
+      "title": "面试：把经历讲清，把条件问清",
+      "url": "guide-08-interview.html",
+      "kind": "core"
+    },
+    {
+      "title": "比较 Offer：先可入职，再比较价值",
+      "url": "guide-09-offer.html",
+      "kind": "core"
+    },
+    {
+      "title": "四类常见障碍，逐个拆解",
+      "url": "guide-10-obstacles.html",
+      "kind": "core"
+    },
+    {
+      "title": "回国衔接：招聘、学历材料与到岗",
+      "url": "guide-11-return-china.html",
+      "kind": "core"
+    },
+    {
+      "title": "AI辅助：整理、练习、检查",
+      "url": "guide-12-ai.html",
+      "kind": "core"
+    },
+    {
+      "title": "30天行动计划与验收",
+      "url": "guide-13-action-plan.html",
+      "kind": "core"
+    },
+    {
+      "title": "怎样使用来源、更新与咨询",
+      "url": "guide-14-method-and-contact.html",
+      "kind": "core"
+    },
+    {
+      "title": "地区覆盖缺口与补充方法",
+      "url": "guide-15-coverage-gaps.html",
+      "kind": "core"
+    },
+    {
+      "title": "阿联酋",
+      "url": "region-ae.html",
+      "kind": "region"
+    },
+    {
+      "title": "澳大利亚",
+      "url": "region-au.html",
+      "kind": "region"
+    },
+    {
+      "title": "加拿大",
+      "url": "region-ca.html",
+      "kind": "region"
+    },
+    {
+      "title": "瑞士",
+      "url": "region-ch.html",
+      "kind": "region"
+    },
+    {
+      "title": "德国",
+      "url": "region-de.html",
+      "kind": "region"
+    },
+    {
+      "title": "芬兰",
+      "url": "region-fi.html",
+      "kind": "region"
+    },
+    {
+      "title": "法国",
+      "url": "region-fr.html",
+      "kind": "region"
+    },
+    {
+      "title": "香港",
+      "url": "region-hk.html",
+      "kind": "region"
+    },
+    {
+      "title": "爱尔兰",
+      "url": "region-ie.html",
+      "kind": "region"
+    },
+    {
+      "title": "日本",
+      "url": "region-jp.html",
+      "kind": "region"
+    },
+    {
+      "title": "韩国",
+      "url": "region-kr.html",
+      "kind": "region"
+    },
+    {
+      "title": "澳门",
+      "url": "region-mo.html",
+      "kind": "region"
+    },
+    {
+      "title": "马来西亚",
+      "url": "region-my.html",
+      "kind": "region"
+    },
+    {
+      "title": "荷兰",
+      "url": "region-nl.html",
+      "kind": "region"
+    },
+    {
+      "title": "新西兰",
+      "url": "region-nz.html",
+      "kind": "region"
+    },
+    {
+      "title": "瑞典",
+      "url": "region-se.html",
+      "kind": "region"
+    },
+    {
+      "title": "新加坡",
+      "url": "region-sg.html",
+      "kind": "region"
+    },
+    {
+      "title": "台湾",
+      "url": "region-tw.html",
+      "kind": "region"
+    },
+    {
+      "title": "英国",
+      "url": "region-uk.html",
+      "kind": "region"
+    },
+    {
+      "title": "美国",
+      "url": "region-us.html",
+      "kind": "region"
+    },
+    {
+      "title": "联系邮件与消息模板",
+      "url": "template-09-contact-emails.html",
+      "kind": "template"
+    },
+    {
+      "title": "中英文申请材料骨架",
+      "url": "template-10-application-materials.html",
+      "kind": "template"
+    },
+    {
+      "title": "AI 辅助求职提示词",
+      "url": "template-11-ai-assistance.html",
+      "kind": "template"
+    },
+    {
+      "title": "一页路线决策填写单",
+      "url": "template-12-route-worksheet.html",
+      "kind": "template"
+    },
+    {
+      "title": "可编辑求职模板",
+      "url": "template-readme.html",
+      "kind": "template"
+    }
+  ]
+}

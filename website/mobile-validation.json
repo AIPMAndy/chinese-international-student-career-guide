@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-11-13",
+  "url": "http://127.0.0.1:4173/",
+  "browser": "Managed Chromium via Computer Use",
+  "method": "Same-origin iframe viewports at 390 and 375 CSS px; actual live rendering and UI interaction. Not a physical phone or mobile device emulation.",
+  "viewport_checks": [
+    {
+      "iframe_css_width": 390,
+      "document_client_width": 375,
+      "document_scroll_width": 375,
+      "result": "pass"
+    },
+    {
+      "iframe_css_width": 375,
+      "document_client_width": 360,
+      "document_scroll_width": 360,
+      "result": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "check": "Mobile navigation opens and closes, then navigates to a section",
+      "result": "pass"
+    },
+    {
+      "check": "Asia filter gives 8 entries; Japan search gives 1; Asia pending filter gives 5",
+      "result": "pass",
+      "scope": "Observed before 20 gap-only regions were added to the navigation"
+    },
+    {
+      "check": "Return to China filter gives 1 entry linked to return chapter",
+      "result": "pass"
+    },
+    {
+      "check": "Reader table horizontal scrolling stays inside a 333px container with 510px content",
+      "result": "pass",
+      "observed_scroll_left": 14
+    },
+    {
+      "check": "Download page has no horizontal document overflow at 375 CSS px viewport",
+      "result": "pass",
+      "document_client_width": 360,
+      "document_scroll_width": 360
+    },
+    {
+      "check": "Download workbook button produces a completed browser download event",
+      "result": "pass",
+      "filename": "career-workbook.xlsx"
+    },
+    {
+      "check": "PDF and ZIP final download buttons",
+      "result": "not_tested",
+      "reason": "Files were being finalized during this UI check; final publish validation owns this check."
+    }
+  ],
+  "limitations": [
+    "Chrome DevTools/device toolbar is disabled by the environment organization policy. It was not bypassed.",
+    "Direct Playwright launch could not start system Chromium due to socket() failed: Operation not permitted. No escalation was requested.",
+    "No physical iOS/Android, touch, or mobile Safari test was performed.",
+    "Twenty explicit gap-only navigation entries were added after the live filter test; regenerated link and coverage checks validate their links and counts."
+  ],
+  "screenshot": "website/review/mobile-390-375.jpg",
+  "temporary_harness_removed": true,
+  "author": "AI 酋长 Andy"
+}

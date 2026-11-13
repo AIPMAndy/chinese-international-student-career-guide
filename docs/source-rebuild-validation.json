@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-13",
+  "source_archive_sha256": "2e2c522649542c8343e037074221b6e54b2a10423a0559933075915f490de859",
+  "method": "Extracted source ZIP into a fresh temporary directory; rebuilt PDF, ZIPs and website without the private spreadsheet generation runtime. Used the included editable XLSX.",
+  "steps": [
+    {
+      "command": "python3 scripts/build_pdf.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 scripts/package_release.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 scripts/build_site.py",
+      "exit_code": 0
+    }
+  ],
+  "pdf_pages": 81,
+  "html_pages": 50,
+  "pass": true
+}

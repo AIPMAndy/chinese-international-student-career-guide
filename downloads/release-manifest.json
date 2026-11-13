@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "date": "2026-11-13",
+  "artifacts": [
+    {
+      "file": "editable-templates.zip",
+      "bytes": 61106,
+      "sha256": "5e7db9fc2dedcf27692bbdade22de07ed1e094d37f0990f7d4e825c18d50d80c"
+    },
+    {
+      "file": "source-code.zip",
+      "bytes": 428348,
+      "sha256": "00a4f8834396f2e5d8723c5c38bdfbbc44749336f13c39665afa73b4f44877c6"
+    },
+    {
+      "file": "downloads/chinese-international-student-career-guide.pdf",
+      "bytes": 674016,
+      "sha256": "053a534012414f8a2efd95213ded1f785d7ef505f33595832bc5fac39778d478"
+    },
+    {
+      "file": "templates/career-workbook.xlsx",
+      "bytes": 49339,
+      "sha256": "d3a14d39bbfe11e62b381200ad27c180df5ddd168a6ae2f729e813d8b87fe647"
+    }
+  ],
+  "source_archive_excludes": [
+    "Git metadata",
+    "hosting identity",
+    "generated website",
+    "generated downloads",
+    "temporary files",
+    "environment files"
+  ],
+  "archive_integrity": "CRC checks passed"
+}

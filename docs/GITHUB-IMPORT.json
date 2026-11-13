@@ -1,0 +1,374 @@
+{
+  "source_sha256": "f13ccda6eb57b827087635ee474694d10f62a8983628c7a3f0ada6403e93f646",
+  "repository": "AIPMAndy/chinese-international-student-career-guide",
+  "pdf_pages": 81,
+  "html_pages": 50,
+  "pages_deployment": "pending; successful import is not a live-site verification",
+  "files": [
+    {
+      "path": "dist/assets/app.js",
+      "bytes": 2509,
+      "sha256": "951a797e35c25032378c97b9377210d251782a5a8c0a868b49fcba540cf51a0d"
+    },
+    {
+      "path": "dist/assets/style.css",
+      "bytes": 17566,
+      "sha256": "a554dd88c979aff626e74eadc22970e233c5db91abf423a8fef572f1fca7f14f"
+    },
+    {
+      "path": "dist/contents.html",
+      "bytes": 23573,
+      "sha256": "4fe2191f2a0adc5f97417f0393e6194f54381d29da858ed2b85f59966fa4d80b"
+    },
+    {
+      "path": "dist/coverage.html",
+      "bytes": 16239,
+      "sha256": "235b82916ae36ed67a6e00f85fec1a3a306fffc495ab94df14c1b3331f42aa51"
+    },
+    {
+      "path": "dist/downloads/chinese-international-student-career-guide.pdf",
+      "bytes": 674016,
+      "sha256": "053a534012414f8a2efd95213ded1f785d7ef505f33595832bc5fac39778d478"
+    },
+    {
+      "path": "dist/downloads/editable-templates.zip",
+      "bytes": 61106,
+      "sha256": "5e7db9fc2dedcf27692bbdade22de07ed1e094d37f0990f7d4e825c18d50d80c"
+    },
+    {
+      "path": "dist/downloads/release-manifest.json",
+      "bytes": 962,
+      "sha256": "c49e2cf8537fe6e16c686386bb5b18a59823795bc59fe86f924e2bf008eac5ec"
+    },
+    {
+      "path": "dist/downloads/source-code.zip",
+      "bytes": 428348,
+      "sha256": "00a4f8834396f2e5d8723c5c38bdfbbc44749336f13c39665afa73b4f44877c6"
+    },
+    {
+      "path": "dist/downloads.html",
+      "bytes": 6671,
+      "sha256": "321a0b1addc03c475a3b84ec0148ed729093774cb177189df34fd04cadb2c7eb"
+    },
+    {
+      "path": "dist/guide-00-start.html",
+      "bytes": 9198,
+      "sha256": "4560c2307839930444e006510b30485582adbd705163ecc2001b9c7468326ad6"
+    },
+    {
+      "path": "dist/guide-01-routes.html",
+      "bytes": 9244,
+      "sha256": "4ff370b6c164f4b05061fde7b7a6a4d914d28467359284528a274a882bb13920"
+    },
+    {
+      "path": "dist/guide-02-calendar.html",
+      "bytes": 8677,
+      "sha256": "e8b0b36b89662e2ae7b54780609e139488049d8660cb1c4078ab662a70a82f50"
+    },
+    {
+      "path": "dist/guide-03-eligibility.html",
+      "bytes": 12954,
+      "sha256": "4fe43733847ac33963621986f426d649f6166dd90be6af8cad1b7b303978b4c3"
+    },
+    {
+      "path": "dist/guide-04-target-role.html",
+      "bytes": 8555,
+      "sha256": "c289b276c6725dab71bc26f9159fe163cae9c3ba92c8316b463b5bfe3956ad76"
+    },
+    {
+      "path": "dist/guide-05-resources.html",
+      "bytes": 8997,
+      "sha256": "642adefd168a058ac007491e9ed7b7e267d4b2b06d442c91e00483a445cc415a"
+    },
+    {
+      "path": "dist/guide-06-materials.html",
+      "bytes": 8771,
+      "sha256": "178ed6b76352362ebdc6a1434c88763de8357fc472c7ccac5cdec92af73e4390"
+    },
+    {
+      "path": "dist/guide-07-application.html",
+      "bytes": 8895,
+      "sha256": "9d6b9db6f41aea085d42d8ea386a6169c49bfcf1dd1d1ca16894669a32a47a9f"
+    },
+    {
+      "path": "dist/guide-08-interview.html",
+      "bytes": 8369,
+      "sha256": "a4fb872abe0c1412bbb89ab327948a842bf03f18485b4e7b72b3db066016eb2c"
+    },
+    {
+      "path": "dist/guide-09-offer.html",
+      "bytes": 8609,
+      "sha256": "9f864b2f2ecca52e09b67111087ab8021ba3be0c637f6044314e624a4e934fca"
+    },
+    {
+      "path": "dist/guide-10-obstacles.html",
+      "bytes": 8975,
+      "sha256": "d30a80fa6315bd7d135454ce0a6c9f82d493231608e8442009598c55d0d698aa"
+    },
+    {
+      "path": "dist/guide-11-return-china.html",
+      "bytes": 9045,
+      "sha256": "87978a54c569e8cdc6e98e0753e5c7218bae54355138922a5d4a6539c0fa069d"
+    },
+    {
+      "path": "dist/guide-12-ai.html",
+      "bytes": 8663,
+      "sha256": "337a981fecfd5fda5ee98dcf12f74799d35a60c8ec0348155fcf568fe63d9938"
+    },
+    {
+      "path": "dist/guide-13-action-plan.html",
+      "bytes": 9757,
+      "sha256": "48c765d705c49b507407ba8c3276a5a9ff15b8aae2b5d5177ab23003573ffcbb"
+    },
+    {
+      "path": "dist/guide-14-method-and-contact.html",
+      "bytes": 8822,
+      "sha256": "73c3766b6d13406f3a3f735817e2eabf801322d8bcf63fc299eb57ae9483ed07"
+    },
+    {
+      "path": "dist/guide-15-coverage-gaps.html",
+      "bytes": 11325,
+      "sha256": "a5d227db2901edfec679b1255ef429bf08a9afb75df78bd8408bc21116a6f754"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 29312,
+      "sha256": "770f68084b25d842c3a1d6e99c4ef217ce9de8319b99a210f6864fa5f762f0c5"
+    },
+    {
+      "path": "dist/region-ae.html",
+      "bytes": 7680,
+      "sha256": "519d699df9decda5579a2a4397644ea8a52dce7e67f3c0e5ad7d68beb514c16e"
+    },
+    {
+      "path": "dist/region-au.html",
+      "bytes": 9101,
+      "sha256": "062d22b18447e62ff766d89a1040d597c3f60785ac9b4daa5d9752486dde90ed"
+    },
+    {
+      "path": "dist/region-ca.html",
+      "bytes": 8487,
+      "sha256": "f9022fe4e58865254aea67b440c1bdce56c0c13c4e0ece562ed6bec736a26c52"
+    },
+    {
+      "path": "dist/region-ch.html",
+      "bytes": 8300,
+      "sha256": "51951cd9f3c17cf5942d4eb8b1bc45f2b3867ee226e152d37d6dc71176a224ba"
+    },
+    {
+      "path": "dist/region-de.html",
+      "bytes": 8378,
+      "sha256": "9373cb73fd85e003f42315829bb061fa564d04573d3d91a18b4f6a687c2990c5"
+    },
+    {
+      "path": "dist/region-fi.html",
+      "bytes": 8124,
+      "sha256": "137c08a6b4593a81bb38aea5dd61105315fbd70c7184379448e998b4921adddd"
+    },
+    {
+      "path": "dist/region-fr.html",
+      "bytes": 8490,
+      "sha256": "fa9487d71e3211ef5a65b79a631ad76c64a3836a69f44e44bed6e268a8f73c33"
+    },
+    {
+      "path": "dist/region-hk.html",
+      "bytes": 9125,
+      "sha256": "102c519dba65f5785763b72dc26778d58bc24e44184c3df141dfdfc7027c753b"
+    },
+    {
+      "path": "dist/region-ie.html",
+      "bytes": 8399,
+      "sha256": "1385b9e5adae00a9b3801dd43d9f683df97ef5ddab6989c5883a3ecaa4c6de67"
+    },
+    {
+      "path": "dist/region-jp.html",
+      "bytes": 8849,
+      "sha256": "6ccbd33293802760e980c0aebb5e179a05ed89c4dd632083769b48606fb1cffa"
+    },
+    {
+      "path": "dist/region-kr.html",
+      "bytes": 7579,
+      "sha256": "ea85f7f4f6d3037384b309ffe9838b0e23b331cbf3292d6314878a9cd831c751"
+    },
+    {
+      "path": "dist/region-mo.html",
+      "bytes": 7481,
+      "sha256": "8d54f94a2bda0b758da6289402794b6ce434434caec02013a894a7ea71693b9e"
+    },
+    {
+      "path": "dist/region-my.html",
+      "bytes": 7716,
+      "sha256": "951c86ec5d4f8d6882902a23bfd73ab939dca709c60e546c55d25f40a5e6e9a4"
+    },
+    {
+      "path": "dist/region-nl.html",
+      "bytes": 8351,
+      "sha256": "6a7a0d0fa40e20d175c197d1d33704818d9aaad5cc9d714a6751bdcc1dd15437"
+    },
+    {
+      "path": "dist/region-nz.html",
+      "bytes": 9146,
+      "sha256": "21eca3e4652ea62328da9ea9fffe8bad3130e396aae1be1560fed1a6666d6383"
+    },
+    {
+      "path": "dist/region-se.html",
+      "bytes": 8324,
+      "sha256": "cf6f8a122c537478546560471001efb439204aac6af3725441c249902f716147"
+    },
+    {
+      "path": "dist/region-sg.html",
+      "bytes": 8952,
+      "sha256": "3dccd67edf8cc5dc48883b125d39dbed8756b9742079a2f84ae0e866064994df"
+    },
+    {
+      "path": "dist/region-tw.html",
+      "bytes": 7737,
+      "sha256": "9bdc258a39ad79e6d650f6ea9b9f217c2b37d4e5ba06f77c23c26bd1f9b07b9e"
+    },
+    {
+      "path": "dist/region-uk.html",
+      "bytes": 8289,
+      "sha256": "65840b44cfd1735e3a746b29b0aafdd98ac375397fc0c9f03518de051554529f"
+    },
+    {
+      "path": "dist/region-us.html",
+      "bytes": 8403,
+      "sha256": "1ec144e26bfdad7be48072ab6c646e72df794675d8959252d52c5ff89bbaf0d1"
+    },
+    {
+      "path": "dist/robots.txt",
+      "bytes": 23,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+    },
+    {
+      "path": "dist/site-manifest.json",
+      "bytes": 4863,
+      "sha256": "ac9b6ed8c82172a81592a065c23296f8183b9bdd0e9c7256a172197b67eb9dcf"
+    },
+    {
+      "path": "dist/sitemap.xml",
+      "bytes": 7102,
+      "sha256": "d08cce733f8e0ff1e44e9222ed10ca446dde4ad5a70130e57930eb3ec6d65cbd"
+    },
+    {
+      "path": "dist/sources.html",
+      "bytes": 56189,
+      "sha256": "1badf93e66c776a06609b3fe182df2fccb773c2d373eef2505cb7f5e3147851e"
+    },
+    {
+      "path": "dist/stage-graduated.html",
+      "bytes": 3200,
+      "sha256": "51e9a75b9f2b73ac2219c61079d5b83d54cb2600e699bd9ab2686fe1d2d3f106"
+    },
+    {
+      "path": "dist/stage-graduating.html",
+      "bytes": 3219,
+      "sha256": "fd10346c744d23eaff90f2fa66ef9c71ce7eb90f7a69024af6bbd009cf56a7cf"
+    },
+    {
+      "path": "dist/stage-returned.html",
+      "bytes": 3205,
+      "sha256": "46db9309e96b7b0106508f709636dea58c55f26a6984294325f0d8d1333676ba"
+    },
+    {
+      "path": "dist/stage-studying.html",
+      "bytes": 3203,
+      "sha256": "652276a03f10549fc35ee85d39409f45ea499e83029a7c70f3eedc2a1e8d066e"
+    },
+    {
+      "path": "dist/template-09-contact-emails.html",
+      "bytes": 16903,
+      "sha256": "0316738ce8b6967b92e6353a8c0ce1c8243141d4ac8bdde03bb1bc3d7ef4e58e"
+    },
+    {
+      "path": "dist/template-10-application-materials.html",
+      "bytes": 14036,
+      "sha256": "ecae9f93064f91e6ddc0d8c3fc6c1629cc524d993b52600ccc9735ceff999b2c"
+    },
+    {
+      "path": "dist/template-11-ai-assistance.html",
+      "bytes": 10223,
+      "sha256": "cae7757986726dc1f19da561a637c7009b44e9c9151d4c1d0b1bc1a48409541e"
+    },
+    {
+      "path": "dist/template-12-route-worksheet.html",
+      "bytes": 8307,
+      "sha256": "f0e1be00ec24f0ed688957c47f575e28a347ca4738ae43a331181101975adf47"
+    },
+    {
+      "path": "dist/template-readme.html",
+      "bytes": 17775,
+      "sha256": "10c289a397ecc22546aee47d8488653252def51d5e2427b5dadc2d0a4525ea38"
+    },
+    {
+      "path": "dist/templates/01-route-decision.csv",
+      "bytes": 543,
+      "sha256": "eb4908ce24645ac5a0619726fd2313823a6808f504750a79a9707ff4ea602e52"
+    },
+    {
+      "path": "dist/templates/02-time-plan.csv",
+      "bytes": 407,
+      "sha256": "18ef9348be6cb418c3607310a0dc833bb59900b39094d2aeb90ce5e08d672409"
+    },
+    {
+      "path": "dist/templates/03-eligibility-check.csv",
+      "bytes": 598,
+      "sha256": "abd8670aa7c0942ec729cb88d041ccd6062badf59dddf383365beb49c72e798d"
+    },
+    {
+      "path": "dist/templates/04-material-checklist.csv",
+      "bytes": 419,
+      "sha256": "884f0ae618c048581641b9ec58d33e3a02ea5c529bb615c05a22e1198f28112e"
+    },
+    {
+      "path": "dist/templates/05-contact-log.csv",
+      "bytes": 385,
+      "sha256": "2bd7073965c01cc7d686b02d6ec552a61ef556316e16bd74f44e36e5906bd85d"
+    },
+    {
+      "path": "dist/templates/06-application-tracker.csv",
+      "bytes": 584,
+      "sha256": "a98d9898fa55e9967eaf80d1dbcb997ced0d51f5d860ebfbafa567efb7a9d72e"
+    },
+    {
+      "path": "dist/templates/07-interview-review.csv",
+      "bytes": 437,
+      "sha256": "6f58fb158085f9599ca38aa3123019157aec1c3a1482a3c198d8a455924246eb"
+    },
+    {
+      "path": "dist/templates/08-offer-comparison.csv",
+      "bytes": 917,
+      "sha256": "91b1e533da7bf829ea2c32f85bc8e2b3c4fdca38849e20eae7d035330b8449b0"
+    },
+    {
+      "path": "dist/templates/09-contact-emails.md",
+      "bytes": 10668,
+      "sha256": "a4c4d743b75fff1319c0ca85f5f46ae9c76a5d9f1f75f210685688b82381e901"
+    },
+    {
+      "path": "dist/templates/10-application-materials.md",
+      "bytes": 7699,
+      "sha256": "9e38b9b2cf274cd8c293999dbb142cebca345aa8c0e41d59246273eda82a1f38"
+    },
+    {
+      "path": "dist/templates/11-ai-assistance.md",
+      "bytes": 4692,
+      "sha256": "b47276990c1fa86ccc09af39bdff617f44691a93793a0f67dcafa96e6356c351"
+    },
+    {
+      "path": "dist/templates/12-route-worksheet.md",
+      "bytes": 2595,
+      "sha256": "e6430245750a1aedcd302ffbc64b661269f329f25e5368fef4c8d968bad66b14"
+    },
+    {
+      "path": "dist/templates/README.md",
+      "bytes": 10459,
+      "sha256": "5318e6e284e677a80117b840092767a596c9a65748a1916259265c65d81308c9"
+    },
+    {
+      "path": "dist/templates/career-workbook.xlsx",
+      "bytes": 49339,
+      "sha256": "d3a14d39bbfe11e62b381200ad27c180df5ddd168a6ae2f729e813d8b87fe647"
+    }
+  ]
+}

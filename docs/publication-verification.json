@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-13",
+  "scope": "Initial public deployment and real browser interaction; subsequent source packages add validation documentation.",
+  "project_id": "appgprj_6af6bc111e3881918fe2fc24051149e1",
+  "source_commit": "1b740c3bf64faca35f6be492b0ff1dcb8ece18eb",
+  "deployment_id": "appgdep_6af6c196def0819182ede91844270022",
+  "version_id": "appgprj_6af6bc111e3881918fe2fc24051149e1~appgver_0c9de55502208191a5456fa5c1642af4",
+  "url": "https://aipmandy.github.io/chinese-international-student-career-guide",
+  "status": "succeeded",
+  "access_mode": "public",
+  "browser_checks": {
+    "home": true,
+    "downloads_page": true,
+    "pdf_download": true,
+    "xlsx_download": true,
+    "templates_zip_download": true,
+    "source_zip_download": true,
+    "all_navigation_entries": 41,
+    "asia_entries": 15,
+    "asia_pending_entries": 12
+  },
+  "github": {
+    "status": "not_published",
+    "reason": "No repository creation operation in connected tools; gh unauthenticated; GitHub new page requires sign-in."
+  }
+}

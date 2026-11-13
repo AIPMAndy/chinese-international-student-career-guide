@@ -1,0 +1,48 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { chromium } from 'playwright';
+
+const root=path.resolve(process.argv[2]||'.');
+const base=process.argv[3]||'http://127.0.0.1:8124';
+const output=process.argv[4]||path.join(root,'website','validation');
+await fs.mkdir(output,{recursive:true});
+const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
+const page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+const files=(await fs.readdir(path.join(root,'dist'))).filter(f=>f.endsWith('.html'));
+const checked=[];
+for(const file of files){
+ const res=await page.goto(`${base}/${file}`,{waitUntil:'networkidle'});
+ const state=await page.evaluate(()=>({title:document.title,h1:document.querySelector('h1')?.textContent,viewport:innerWidth,bodyWidth:document.body.scrollWidth,documentWidth:document.documentElement.scrollWidth,brokenImages:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).length}));
+ checked.push({file,status:res.status(),...state,ok:res.status()===200&&Boolean(state.h1)&&state.documentWidth<=state.viewport&&state.brokenImages===0});
+}
+await page.goto(`${base}/index.html`,{waitUntil:'networkidle'});
+await page.screenshot({path:path.join(output,'home-mobile.png'),fullPage:true});
+await page.locator('[data-menu]').click();
+const menuOpen=await page.locator('[data-menu]').getAttribute('aria-expanded');
+await page.locator('[data-menu]').click();
+await page.locator('[data-region-query]').fill('日本');
+const filtered=await page.locator('[data-region]:visible').count();
+const filteredText=await page.locator('[data-region]:visible').allTextContents();
+await page.locator('[data-region-query]').fill('不存在的地区xyz');
+const emptyShown=await page.locator('[data-region-empty]').isVisible();
+await page.locator('[data-region-query]').fill('');
+await page.locator('[data-region-group]').selectOption('欧洲');
+const groups=await page.locator('[data-region]:visible').evaluateAll(nodes=>nodes.map(n=>n.dataset.group));
+await page.locator('[data-region-group]').selectOption('');
+await page.locator('[data-region-status]').selectOption('pending');
+const statuses=await page.locator('[data-region]:visible').evaluateAll(nodes=>nodes.map(n=>n.dataset.status));
+const download=await page.request.get(`${base}/templates/career-workbook.xlsx`);
+const downloadBody=await download.body();
+await page.goto(`${base}/guide-00-start.html`,{waitUntil:'networkidle'});
+await page.screenshot({path:path.join(output,'reader-mobile.png'),fullPage:true});
+await page.goto(`${base}/region-uk.html`,{waitUntil:'networkidle'});
+await page.screenshot({path:path.join(output,'region-mobile.png'),fullPage:true});
+await page.setViewportSize({width:1440,height:1000});
+await page.goto(`${base}/index.html`,{waitUntil:'networkidle'});
+await page.screenshot({path:path.join(output,'home-desktop.png'),fullPage:false});
+const result={checked_at:'2026-11-13',mobile_viewport:'390x844',pages:checked,interaction:{mobile_menu_open:menuOpen==='true',japan_search:filtered===1&&filteredText[0].includes('日本'),empty_search:emptyShown,europe_filter:groups.length>0&&groups.every(x=>x==='欧洲'),pending_filter:statuses.every(x=>x==='pending'),workbook_download:download.status()===200&&downloadBody.subarray(0,2).toString()==='PK'},console_errors:errors};
+await fs.writeFile(path.join(output,'browser-validation.json'),JSON.stringify(result,null,2));
+console.log(JSON.stringify({pages:checked.length,failed_pages:checked.filter(p=>!p.ok),interaction:result.interaction,console_errors:errors,output}));
+await browser.close();
+if(checked.some(p=>!p.ok)||Object.values(result.interaction).some(x=>!x)||errors.length)process.exitCode=1;

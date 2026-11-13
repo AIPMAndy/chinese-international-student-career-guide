@@ -1,0 +1,666 @@
+{
+  "checked_at_utc": "2026-11-13T07:56:34.430194+00:00",
+  "base_url": "https://aipmandy.github.io/chinese-international-student-career-guide/",
+  "authentication": "None; public GET requests with no cookies or credentials",
+  "files_checked": 73,
+  "errors": [],
+  "results": [
+    {
+      "path": "assets/app.js",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/assets/app.js",
+      "content_type": "text/javascript",
+      "bytes": 2509,
+      "sha256": "951a797e35c25032378c97b9377210d251782a5a8c0a868b49fcba540cf51a0d",
+      "matches_local": true
+    },
+    {
+      "path": "assets/style.css",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/assets/style.css",
+      "content_type": "text/css",
+      "bytes": 17566,
+      "sha256": "a554dd88c979aff626e74eadc22970e233c5db91abf423a8fef572f1fca7f14f",
+      "matches_local": true
+    },
+    {
+      "path": "contents.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/contents",
+      "content_type": "text/html",
+      "bytes": 23502,
+      "sha256": "554bc0d1b1d37d65ed503686ef2fdafa89c825237c8c5cfdfd8cf93788607a17",
+      "matches_local": true
+    },
+    {
+      "path": "coverage.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/coverage",
+      "content_type": "text/html",
+      "bytes": 16168,
+      "sha256": "e19e04c5f6b890edb74c5af23289d481deaf63b54a9d214abfdbcd88ccda17a2",
+      "matches_local": true
+    },
+    {
+      "path": "downloads.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/downloads",
+      "content_type": "text/html",
+      "bytes": 6600,
+      "sha256": "356f9917998b6b7a7cf5072850f8f848c43b51259fa99015da9d28b467d81e70",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/chinese-international-student-career-guide.pdf",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/downloads/chinese-international-student-career-guide.pdf",
+      "content_type": "application/pdf",
+      "bytes": 673981,
+      "sha256": "f1f3a332d24505b198222a7186694e9aff633285d58557316e4cb6ce38f4201f",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/editable-templates.zip",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/downloads/editable-templates.zip",
+      "content_type": "application/zip",
+      "bytes": 61106,
+      "sha256": "5e7db9fc2dedcf27692bbdade22de07ed1e094d37f0990f7d4e825c18d50d80c",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/release-manifest.json",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/downloads/release-manifest.json",
+      "content_type": "application/json",
+      "bytes": 962,
+      "sha256": "eed06aa43fd8d01cde9cb40cf33c43292d89e4aa95f1f7f48963cc31a34c0f38",
+      "matches_local": true
+    },
+    {
+      "path": "downloads/source-code.zip",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/downloads/source-code.zip",
+      "content_type": "application/zip",
+      "bytes": 832428,
+      "sha256": "2e2c522649542c8343e037074221b6e54b2a10423a0559933075915f490de859",
+      "matches_local": true
+    },
+    {
+      "path": "guide-00-start.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-00-start",
+      "content_type": "text/html",
+      "bytes": 9127,
+      "sha256": "7e8bb7fd2f6aa4c2134100addb2014ce67d11e13b4711dd4ba2c25e73c41926d",
+      "matches_local": true
+    },
+    {
+      "path": "guide-01-routes.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-01-routes",
+      "content_type": "text/html",
+      "bytes": 9173,
+      "sha256": "ca011ca3f066e87bf826fd74838ad331c88dac2adeae83f6fd6991ebb701d619",
+      "matches_local": true
+    },
+    {
+      "path": "guide-02-calendar.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-02-calendar",
+      "content_type": "text/html",
+      "bytes": 8606,
+      "sha256": "7dab6575452a6af2705e321fb07b4bf85f131787a5e8a2a4ade9ea32dfd61ab3",
+      "matches_local": true
+    },
+    {
+      "path": "guide-03-eligibility.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-03-eligibility",
+      "content_type": "text/html",
+      "bytes": 12883,
+      "sha256": "af7c660ee5a7d0de85d60e4609af4221d21cdbf7811cbc89ff431df1e4419072",
+      "matches_local": true
+    },
+    {
+      "path": "guide-04-target-role.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-04-target-role",
+      "content_type": "text/html",
+      "bytes": 8484,
+      "sha256": "c08e63a010a41c3a1dbf3795de33d45e0cffddf520b0bd289eb3222655e3ed88",
+      "matches_local": true
+    },
+    {
+      "path": "guide-05-resources.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-05-resources",
+      "content_type": "text/html",
+      "bytes": 8926,
+      "sha256": "e756137b59672377e6d99bed7a3e0c23c38282854cd9e6189d822648cbd7f003",
+      "matches_local": true
+    },
+    {
+      "path": "guide-06-materials.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-06-materials",
+      "content_type": "text/html",
+      "bytes": 8700,
+      "sha256": "878fa3e82a969f633ccb9686608bf8bb4fcd69d013aa7b1bb4ffd263c293c9dc",
+      "matches_local": true
+    },
+    {
+      "path": "guide-07-application.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-07-application",
+      "content_type": "text/html",
+      "bytes": 8824,
+      "sha256": "a3f7c219c84705d08e8a9f3ccd25caf87889945abd1bb81112addb3818c4017f",
+      "matches_local": true
+    },
+    {
+      "path": "guide-08-interview.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-08-interview",
+      "content_type": "text/html",
+      "bytes": 8298,
+      "sha256": "24fc56e8fbf2df0cdd556a8b3d6131ea0f226477a7ba90d476bac47045f7e850",
+      "matches_local": true
+    },
+    {
+      "path": "guide-09-offer.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-09-offer",
+      "content_type": "text/html",
+      "bytes": 8538,
+      "sha256": "47eaec9c9f792a3ce8f1ffbe488cffa87790d9ba81695f10453ebddbaa50e084",
+      "matches_local": true
+    },
+    {
+      "path": "guide-10-obstacles.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-10-obstacles",
+      "content_type": "text/html",
+      "bytes": 8904,
+      "sha256": "569e15bbea43b5eb6873ba32656bded07430b38fdcab448b7694154ead928020",
+      "matches_local": true
+    },
+    {
+      "path": "guide-11-return-china.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-11-return-china",
+      "content_type": "text/html",
+      "bytes": 8974,
+      "sha256": "0fe155fef9ba3ed85ae41367c44ff9d1396795c4702db6c3cc5eb8a50395e3df",
+      "matches_local": true
+    },
+    {
+      "path": "guide-12-ai.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-12-ai",
+      "content_type": "text/html",
+      "bytes": 8592,
+      "sha256": "8298d251177d2d9047abd90da647d8c1b901e19920561d567c3bcb45d7594e10",
+      "matches_local": true
+    },
+    {
+      "path": "guide-13-action-plan.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-13-action-plan",
+      "content_type": "text/html",
+      "bytes": 9686,
+      "sha256": "d7c0e487ba32e488a66707a8918c228708de9ac949126e664900870c58e2592b",
+      "matches_local": true
+    },
+    {
+      "path": "guide-14-method-and-contact.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-14-method-and-contact",
+      "content_type": "text/html",
+      "bytes": 8751,
+      "sha256": "f5d9baaebbf1ef2278199921c696cf3ad362889df051abb3edbf41f530b71109",
+      "matches_local": true
+    },
+    {
+      "path": "guide-15-coverage-gaps.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/guide-15-coverage-gaps",
+      "content_type": "text/html",
+      "bytes": 11254,
+      "sha256": "ea9b132c4d3d1a295034119c6fa791b813e1c4d98842198d5dde2d5bd09a8175",
+      "matches_local": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/",
+      "content_type": "text/html",
+      "bytes": 29241,
+      "sha256": "4ec5dc20e99ac07ecfea04057659477645ede19801dbae4a4fd44d50735284d3",
+      "matches_local": true
+    },
+    {
+      "path": "region-ae.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-ae",
+      "content_type": "text/html",
+      "bytes": 7609,
+      "sha256": "1ddf267e0e13794c20d8b81c35b812440806dccf4f212e4ef4b9564b26b89d19",
+      "matches_local": true
+    },
+    {
+      "path": "region-au.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-au",
+      "content_type": "text/html",
+      "bytes": 9030,
+      "sha256": "66e297985a09504b53a971424eb704960a4d8576f3589ba3ae02804ea816b9eb",
+      "matches_local": true
+    },
+    {
+      "path": "region-ca.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-ca",
+      "content_type": "text/html",
+      "bytes": 8416,
+      "sha256": "a2fde766d77e148d705108878f336dc676b776e5ac70dee847e0b6cfd0193ef5",
+      "matches_local": true
+    },
+    {
+      "path": "region-ch.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-ch",
+      "content_type": "text/html",
+      "bytes": 8229,
+      "sha256": "c3aa51788055eeecc9b8c45c7935c967f245ee6baacbb8929ec6376878861d67",
+      "matches_local": true
+    },
+    {
+      "path": "region-de.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-de",
+      "content_type": "text/html",
+      "bytes": 8307,
+      "sha256": "12e688cb000c334f562cff91475eb0fc8ab02c92e69e4844154d2551384a310b",
+      "matches_local": true
+    },
+    {
+      "path": "region-fi.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-fi",
+      "content_type": "text/html",
+      "bytes": 8053,
+      "sha256": "fbe985b8e3cad0ac7405135e7fd81ee65a45a5ca588d718b9bd2ec91cf061c3b",
+      "matches_local": true
+    },
+    {
+      "path": "region-fr.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-fr",
+      "content_type": "text/html",
+      "bytes": 8419,
+      "sha256": "ada3e4dd0400ac5372196748c62064ba7755d2e53d447b0b9c40f014b256c6bb",
+      "matches_local": true
+    },
+    {
+      "path": "region-hk.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-hk",
+      "content_type": "text/html",
+      "bytes": 9054,
+      "sha256": "e2e7da8bd5a4564834c8b6ebee2d01b8322adcfaabeac57ac82bcce136648d03",
+      "matches_local": true
+    },
+    {
+      "path": "region-ie.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-ie",
+      "content_type": "text/html",
+      "bytes": 8328,
+      "sha256": "5d042ee0e35bfaefef0b5127ad0b98119381f50831467c497f87aaa4b728f27e",
+      "matches_local": true
+    },
+    {
+      "path": "region-jp.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-jp",
+      "content_type": "text/html",
+      "bytes": 8778,
+      "sha256": "0a04e387f80ec2d525e824e1f0f67296ad0771a3a94f5732bf8448a8a1e17594",
+      "matches_local": true
+    },
+    {
+      "path": "region-kr.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-kr",
+      "content_type": "text/html",
+      "bytes": 7508,
+      "sha256": "1a0ba2476dd6dc7a5487cb4a54ead30160fe9b3e7abae1d85e0ef1bde5a22f70",
+      "matches_local": true
+    },
+    {
+      "path": "region-mo.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-mo",
+      "content_type": "text/html",
+      "bytes": 7410,
+      "sha256": "c1148302f192c17e88665592ad13b2a7347ec80d02c9df549bb2e0b823be640c",
+      "matches_local": true
+    },
+    {
+      "path": "region-my.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-my",
+      "content_type": "text/html",
+      "bytes": 7645,
+      "sha256": "83f270ab4cd5578a6e4b2a0ccce4d53eb4f7997d8e8209beb9eeaf50c67ea892",
+      "matches_local": true
+    },
+    {
+      "path": "region-nl.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-nl",
+      "content_type": "text/html",
+      "bytes": 8280,
+      "sha256": "3b0798ae057c60b80089668df5145d91727c8588220227f9f97a6212cb5d556b",
+      "matches_local": true
+    },
+    {
+      "path": "region-nz.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-nz",
+      "content_type": "text/html",
+      "bytes": 9075,
+      "sha256": "84dd68d001bbd171d0bf57a9b353a258be75ac86442049560f4dd39fba8b381a",
+      "matches_local": true
+    },
+    {
+      "path": "region-se.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-se",
+      "content_type": "text/html",
+      "bytes": 8253,
+      "sha256": "b290d39d69be9379923d0cecf233145d997a63da9e3e707454b78046020d5261",
+      "matches_local": true
+    },
+    {
+      "path": "region-sg.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-sg",
+      "content_type": "text/html",
+      "bytes": 8881,
+      "sha256": "0bfc93cc2a9069f0637c66f87a2eb5700088f91f54fc8dcb0461fae14d25cf3f",
+      "matches_local": true
+    },
+    {
+      "path": "region-tw.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-tw",
+      "content_type": "text/html",
+      "bytes": 7666,
+      "sha256": "47ebce58194c4b5494b184a98f4910a3c4f341c1f313ae59fb64be588a0a8f5d",
+      "matches_local": true
+    },
+    {
+      "path": "region-uk.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-uk",
+      "content_type": "text/html",
+      "bytes": 8218,
+      "sha256": "fa225fe6e6cc49b7198a53ed219bedd2254322b6bb0d2ffed4cff85e2881cbfd",
+      "matches_local": true
+    },
+    {
+      "path": "region-us.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/region-us",
+      "content_type": "text/html",
+      "bytes": 8332,
+      "sha256": "480438fdd3d99e03d0e94907f6d66e8a697d44cc0e2d2ecea9cd24af8d3dff0c",
+      "matches_local": true
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/robots.txt",
+      "content_type": "text/plain",
+      "bytes": 23,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "matches_local": true
+    },
+    {
+      "path": "site-manifest.json",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/site-manifest.json",
+      "content_type": "application/json",
+      "bytes": 4863,
+      "sha256": "ac9b6ed8c82172a81592a065c23296f8183b9bdd0e9c7256a172197b67eb9dcf",
+      "matches_local": true
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/sitemap.xml",
+      "content_type": "text/xml",
+      "bytes": 6402,
+      "sha256": "b64c9be7ef529b0a241d96c1399339e674be8bbb835dfe7be6196850c5093cf5",
+      "matches_local": true
+    },
+    {
+      "path": "sources.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/sources",
+      "content_type": "text/html",
+      "bytes": 56118,
+      "sha256": "a55d0d70ba359d04ec50f7501f5338d0ebcfe665b895d6fc9d2ab667364ae5a5",
+      "matches_local": true
+    },
+    {
+      "path": "stage-graduated.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/stage-graduated",
+      "content_type": "text/html",
+      "bytes": 3129,
+      "sha256": "f3c4a5ec8d23fa259a1609cf738b70d62810ce4f7f0c0f44c8a7317f773f6078",
+      "matches_local": true
+    },
+    {
+      "path": "stage-graduating.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/stage-graduating",
+      "content_type": "text/html",
+      "bytes": 3148,
+      "sha256": "b3a95b82b9225056528d8b265264b26e6aef15e47395d7c6d667e34234f17dd9",
+      "matches_local": true
+    },
+    {
+      "path": "stage-returned.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/stage-returned",
+      "content_type": "text/html",
+      "bytes": 3134,
+      "sha256": "026201f893a4f04087bf54eac684406666f95dffaf76ffb426286cba846944c2",
+      "matches_local": true
+    },
+    {
+      "path": "stage-studying.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/stage-studying",
+      "content_type": "text/html",
+      "bytes": 3132,
+      "sha256": "0b27754bc8bd712f2401928785bb2c3af6bf00e0c6ad9b06d7007acfd226ad45",
+      "matches_local": true
+    },
+    {
+      "path": "template-09-contact-emails.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/template-09-contact-emails",
+      "content_type": "text/html",
+      "bytes": 16832,
+      "sha256": "2d0e0f39c89d950368706a20008af8dba2e1910bdba58b795fbb0984aa3bd70e",
+      "matches_local": true
+    },
+    {
+      "path": "template-10-application-materials.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/template-10-application-materials",
+      "content_type": "text/html",
+      "bytes": 13965,
+      "sha256": "a47a905e3dc818349ec77ad063bbf4645eca66b89e8815dcb13f0f4e1444cc0b",
+      "matches_local": true
+    },
+    {
+      "path": "template-11-ai-assistance.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/template-11-ai-assistance",
+      "content_type": "text/html",
+      "bytes": 10152,
+      "sha256": "3a72334d33941d0ffe670e0f124e048bfe2a5899bbee5bb786d505c0875a8ba3",
+      "matches_local": true
+    },
+    {
+      "path": "template-12-route-worksheet.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/template-12-route-worksheet",
+      "content_type": "text/html",
+      "bytes": 8236,
+      "sha256": "a2f4e225604828d414a68fd3ce6cb47df9984361c5504d565344c57c53133394",
+      "matches_local": true
+    },
+    {
+      "path": "template-readme.html",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/template-readme",
+      "content_type": "text/html",
+      "bytes": 17704,
+      "sha256": "d335398d56a4ab5bbec24fd1ce7e79fd5b7dad6f5796ac67acd4b632c11281c0",
+      "matches_local": true
+    },
+    {
+      "path": "templates/01-route-decision.csv",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/01-route-decision.csv",
+      "content_type": "text/csv",
+      "bytes": 543,
+      "sha256": "eb4908ce24645ac5a0619726fd2313823a6808f504750a79a9707ff4ea602e52",
+      "matches_local": true
+    },
+    {
+      "path": "templates/02-time-plan.csv",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/02-time-plan.csv",
+      "content_type": "text/csv",
+      "bytes": 407,
+      "sha256": "18ef9348be6cb418c3607310a0dc833bb59900b39094d2aeb90ce5e08d672409",
+      "matches_local": true
+    },
+    {
+      "path": "templates/03-eligibility-check.csv",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/03-eligibility-check.csv",
+      "content_type": "text/csv",
+      "bytes": 598,
+      "sha256": "abd8670aa7c0942ec729cb88d041ccd6062badf59dddf383365beb49c72e798d",
+      "matches_local": true
+    },
+    {
+      "path": "templates/04-material-checklist.csv",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/04-material-checklist.csv",
+      "content_type": "text/csv",
+      "bytes": 419,
+      "sha256": "884f0ae618c048581641b9ec58d33e3a02ea5c529bb615c05a22e1198f28112e",
+      "matches_local": true
+    },
+    {
+      "path": "templates/05-contact-log.csv",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/05-contact-log.csv",
+      "content_type": "text/csv",
+      "bytes": 385,
+      "sha256": "2bd7073965c01cc7d686b02d6ec552a61ef556316e16bd74f44e36e5906bd85d",
+      "matches_local": true
+    },
+    {
+      "path": "templates/06-application-tracker.csv",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/06-application-tracker.csv",
+      "content_type": "text/csv",
+      "bytes": 584,
+      "sha256": "a98d9898fa55e9967eaf80d1dbcb997ced0d51f5d860ebfbafa567efb7a9d72e",
+      "matches_local": true
+    },
+    {
+      "path": "templates/07-interview-review.csv",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/07-interview-review.csv",
+      "content_type": "text/csv",
+      "bytes": 437,
+      "sha256": "6f58fb158085f9599ca38aa3123019157aec1c3a1482a3c198d8a455924246eb",
+      "matches_local": true
+    },
+    {
+      "path": "templates/08-offer-comparison.csv",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/08-offer-comparison.csv",
+      "content_type": "text/csv",
+      "bytes": 917,
+      "sha256": "91b1e533da7bf829ea2c32f85bc8e2b3c4fdca38849e20eae7d035330b8449b0",
+      "matches_local": true
+    },
+    {
+      "path": "templates/09-contact-emails.md",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/09-contact-emails.md",
+      "content_type": "text/markdown",
+      "bytes": 10668,
+      "sha256": "a4c4d743b75fff1319c0ca85f5f46ae9c76a5d9f1f75f210685688b82381e901",
+      "matches_local": true
+    },
+    {
+      "path": "templates/10-application-materials.md",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/10-application-materials.md",
+      "content_type": "text/markdown",
+      "bytes": 7699,
+      "sha256": "9e38b9b2cf274cd8c293999dbb142cebca345aa8c0e41d59246273eda82a1f38",
+      "matches_local": true
+    },
+    {
+      "path": "templates/11-ai-assistance.md",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/11-ai-assistance.md",
+      "content_type": "text/markdown",
+      "bytes": 4692,
+      "sha256": "b47276990c1fa86ccc09af39bdff617f44691a93793a0f67dcafa96e6356c351",
+      "matches_local": true
+    },
+    {
+      "path": "templates/12-route-worksheet.md",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/12-route-worksheet.md",
+      "content_type": "text/markdown",
+      "bytes": 2595,
+      "sha256": "e6430245750a1aedcd302ffbc64b661269f329f25e5368fef4c8d968bad66b14",
+      "matches_local": true
+    },
+    {
+      "path": "templates/README.md",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/README.md",
+      "content_type": "text/markdown",
+      "bytes": 10459,
+      "sha256": "5318e6e284e677a80117b840092767a596c9a65748a1916259265c65d81308c9",
+      "matches_local": true
+    },
+    {
+      "path": "templates/career-workbook.xlsx",
+      "status": 200,
+      "final_url": "https://aipmandy.github.io/chinese-international-student-career-guide/templates/career-workbook.xlsx",
+      "content_type": "application/octet-stream",
+      "bytes": 49339,
+      "sha256": "d3a14d39bbfe11e62b381200ad27c180df5ddd168a6ae2f729e813d8b87fe647",
+      "matches_local": true
+    }
+  ]
+}

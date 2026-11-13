@@ -1,0 +1,7 @@
+[
+  {"id":"S-CN-01","region":"回国求职","title":"国（境）外学历学位认证指南","url":"https://www.cscse.edu.cn/zwfw/lxfwzxwsfwdt2020/xlxwrz32/qtxx/2026042823585825550/index.html","publisher":"教育部留学服务中心","checked_at":"2026-11-13","supports":"申请人本人提交、材料与流程、分类核验周期及延长可能","status":"verified","notes":"正文已打开读取。网页显示发布时间2025-04-02，不能按URL中的20260428推断发布日期。"},
+  {"id":"S-CN-02","region":"回国求职","title":"留学服务中心网上服务大厅：学历学位认证","url":"https://zwfw.cscse.edu.cn/zwfw/lxfwzxwsfwdt2020/xlxwrz32/index.html","publisher":"教育部留学服务中心","checked_at":"2026-11-13","supports":"认证官方入口与材料类别","status":"verified","notes":"材料以当前适用类别和申请系统为准。"},
+  {"id":"S-CN-03","region":"回国求职","title":"华为校园招聘","url":"https://career.huawei.com/cn/campus-recruitment","publisher":"华为","checked_at":"2026-11-13","supports":"同一届招聘按国内/海外和学位区分毕业范围","status":"partial","notes":"官方检索摘要显示2027届范围；直接打开动态页面无可读正文。本版不将摘要的具体日期写成全面规则，投递前须打开具体岗位确认。"},
+  {"id":"S-CN-04","region":"回国及海外招聘","title":"腾讯海外校园招聘FAQ","url":"https://careers.tencent.com/zh-cn/faqdetail.html","publisher":"腾讯","checked_at":"2026-11-13","supports":"海外入口、当地工作许可与在校要求分开核验","status":"partial","notes":"官方检索摘要可读，动态页面未返回正文。只作阅读方法示例，岗位与批次细则待申请时确认。"},
+  {"id":"S-CN-05","region":"回国求职","title":"中国公共招聘网","url":"https://job.mohrss.gov.cn/","publisher":"人力资源和社会保障部","checked_at":"2026-11-13","supports":"公共就业资源入口，不支持任何特定岗位仍开放的结论","status":"partial","notes":"本次直接读取超时；保留官方入口，未逐条核验平台岗位，不能声称当前网站或职位已正常打开。"}
+]

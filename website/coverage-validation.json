@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-11-13",
+  "navigation_total": 41,
+  "groups": {
+    "北美": 4,
+    "欧洲": 17,
+    "亚洲": 15,
+    "大洋洲": 4,
+    "回国": 1
+  },
+  "verified": 16,
+  "pending": 25,
+  "gap_links": 20,
+  "return_link": "guide-11-return-china.html",
+  "pdf_available": true
+}

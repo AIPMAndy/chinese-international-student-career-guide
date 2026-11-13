@@ -1,0 +1,17 @@
+tmp/
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+.env
+.env.*
+outputs/
+*.tar.gz
+.site-workflow/
+
+
+*.ttf
+*.otf
+*.ttc
+*.woff
+*.woff2

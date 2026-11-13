@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-13",
+  "official_source_records": 90,
+  "source_statuses": {
+    "verified": 75,
+    "partial": 15
+  },
+  "inline_source_occurrences": 94,
+  "route_pages": 21,
+  "gap_only_entries": 20,
+  "coverage_statuses": {
+    "已核验基础路径": 16,
+    "待补充": 25
+  },
+  "local_markdown_links": 125,
+  "errors": [],
+  "scope": "Consistency and file checks. Official page reads and access limitations are recorded in data/sources-*.json and docs/research-*.md; this is not a new network crawl."
+}

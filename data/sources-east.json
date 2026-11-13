@@ -1,0 +1,750 @@
+[
+  {
+    "id": "S-HK-01",
+    "region": "香港",
+    "title": "Immigration Arrangements for Non-local Graduates (IANG)",
+    "url": "https://www.immd.gov.hk/eng/services/visas/IANG.html",
+    "publisher": "香港入境事务处",
+    "checked_at": "2026-11-13",
+    "supports": "IANG 适用学历和课程、毕业后六个月分类、初次申请与续期条件。",
+    "status": "verified",
+    "notes": "读取官方正文；个人资格须逐项核验，六个月分类窗口不等于现有逗留期限。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-HK-02",
+    "region": "香港",
+    "title": "Immigration Arrangement for Non-local Graduates — FAQ",
+    "url": "https://www.immd.gov.hk/eng/faq/non-local-graduates-return-employment-arrangement.html",
+    "publisher": "香港入境事务处",
+    "checked_at": "2026-11-13",
+    "supports": "IANG 近期与非近期毕业生区别，以及仅有时间限制者在获准逗留期间的就业安排。",
+    "status": "verified",
+    "notes": "仅用于 IANG，不套用在读学生条件。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-HK-03",
+    "region": "香港",
+    "title": "Recruitment & Job / Internship",
+    "url": "https://www.cedars.hku.hk/careers/jobs",
+    "publisher": "香港大学 CEDARS",
+    "checked_at": "2026-11-13",
+    "supports": "本校招聘活动、NETjobs、JIJIS、实习项目和账号适用群体。",
+    "status": "verified",
+    "notes": "招聘会时间属于该校活动节奏，不是所有香港岗位的统一窗口。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-HK-04",
+    "region": "香港",
+    "title": "HKU Careers — How To Apply",
+    "url": "https://www.hr.hku.hk/career_opportunities/how_to_apply.html",
+    "publisher": "香港大学人力资源处",
+    "checked_at": "2026-11-13",
+    "supports": "作为雇主的网申流程、CV 自动读取后仍须补全信息、提交回执与申请门户。",
+    "status": "verified",
+    "notes": "仅为真实申请流程示例，不代表正在招聘任何特定岗位。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-JP-01",
+    "region": "日本",
+    "title": "Job Hunting Guide for International Students 2027",
+    "url": "https://www.jasso.go.jp/en/ryugaku/after_study_j/job/__icsFiles/afieldfile/2026/01/27/guide_2027_all_e.pdf",
+    "publisher": "日本学生支援机构 JASSO",
+    "checked_at": "2026-11-13",
+    "supports": "预报名与正式申请区别；履历书、Entry Sheet、学校职业中心检查材料的使用方法。",
+    "status": "verified",
+    "notes": "已读取完整 PDF 的相关正文，重点为印刷页 12、43 至 47；未复制其案例。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-JP-02",
+    "region": "日本",
+    "title": "Job Hunting Guide 2027 — Job Hunting Schedule",
+    "url": "https://www.jasso.go.jp/en/ryugaku/after_study_j/job/__icsFiles/afieldfile/2026/01/27/guide_2027_10-11_schedule_e.pdf",
+    "publisher": "日本学生支援机构 JASSO",
+    "checked_at": "2026-11-13",
+    "supports": "2027 求职日程示例、新卒与全年招聘并存、九月毕业者应确认入社月份。",
+    "status": "verified",
+    "notes": "已打开并截图检查整页图。政府请求的日程不是每家雇主实际截止日。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-JP-03",
+    "region": "日本",
+    "title": "大学等を卒業後就職活動のための滞在をご希望のみなさまへ",
+    "url": "https://www.moj.go.jp/isa/publications/materials/nyukan_nyukan84.html",
+    "publisher": "日本出入国在留管理厅",
+    "checked_at": "2026-11-13",
+    "supports": "符合条件毕业生继续求职的特定活动在留安排、学校推荐及第二年项目条件。",
+    "status": "partial",
+    "notes": "条件化表述；不把求职在留等同正式受雇资格。 直接打开返回403；官方搜索索引支持所列内容，实时正文访问仍待确认。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "blocked",
+      "details": "直接打开返回403；官方搜索索引支持所列内容，实时正文访问仍待确认。"
+    }
+  },
+  {
+    "id": "S-JP-04",
+    "region": "日本",
+    "title": "Career Search — Open for Professionals",
+    "url": "https://www.jetro.go.jp/en/hrportal/findjob.html",
+    "publisher": "日本贸易振兴机构 JETRO",
+    "checked_at": "2026-11-13",
+    "supports": "全球人才企业名单、外国人就业服务中心等官方求职资源。",
+    "status": "verified",
+    "notes": "企业名录不等于实时职位、担保承诺或录用。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-SG-01",
+    "region": "新加坡",
+    "title": "Graduate from an Institute of Higher Learning Seeking Employment in Singapore",
+    "url": "https://www.ica.gov.sg/information-and-e-services/long-term-visit-and-study/long-term-visit-pass/long-term-visit-pass-application-renewal/graduate-from-an-institute-of-higher-learning-seeking-employment-in-singapore",
+    "publisher": "新加坡移民与关卡局 ICA",
+    "checked_at": "2026-11-13",
+    "supports": "指定本地高校毕业生求职 LTVP 的适用范围、申请而非自动获得。",
+    "status": "verified",
+    "notes": "停留求职与工作准证分开核验。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-SG-02",
+    "region": "新加坡",
+    "title": "Eligibility for Employment Pass",
+    "url": "https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility",
+    "publisher": "新加坡人力部 MOM",
+    "checked_at": "2026-11-13",
+    "supports": "EP 薪资门槛、COMPASS、年龄行业差异及 2027 变更栏。",
+    "status": "verified",
+    "notes": "实际读取页面含 2026-11-03 更新标识；未把最低门槛当作获批保证。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-SG-03",
+    "region": "新加坡",
+    "title": "Key facts on S Pass",
+    "url": "https://www.mom.gov.sg/passes-and-permits/s-pass/key-facts",
+    "publisher": "新加坡人力部 MOM",
+    "checked_at": "2026-11-13",
+    "supports": "雇主申请、资格门槛、雇主配额征税以及 2027 新申请门槛变化。",
+    "status": "verified",
+    "notes": "不在正文固化统一最低数字；按预计申请日期及个人情况核验。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-SG-04",
+    "region": "新加坡",
+    "title": "Work pass exemption for foreign students",
+    "url": "https://www.mom.gov.sg/passes-and-permits/work-pass-exemption-for-foreign-students",
+    "publisher": "新加坡人力部 MOM",
+    "checked_at": "2026-11-13",
+    "supports": "在读工作豁免有院校与活动条件；学业完成且学生准证到期后需相应工作准证。",
+    "status": "verified",
+    "notes": "不把工作豁免推广到交换生或所有学生。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-SG-05",
+    "region": "新加坡",
+    "title": "Employment Opportunities — NUS Centre for Future-ready Graduates",
+    "url": "https://nus.edu.sg/cfg/students/jobs-internships/employment-opportunities",
+    "publisher": "新加坡国立大学 NUS",
+    "checked_at": "2026-11-13",
+    "supports": "TalentConnect 面向本校学生和校友，提供岗位、实习等资源。",
+    "status": "verified",
+    "notes": "平台账号与具体岗位资格分开核验。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-SG-06",
+    "region": "新加坡",
+    "title": "Create an Impressive Resume",
+    "url": "https://www.nus.edu.sg/cfg/students/career-resources/create-an-impressive-resume",
+    "publisher": "新加坡国立大学 NUS",
+    "checked_at": "2026-11-13",
+    "supports": "毕业生简历倒序结构与教育、经历、项目、技能内容。",
+    "status": "verified",
+    "notes": "只作为材料方法，不代表每个雇主同一格式。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-SG-07",
+    "region": "新加坡",
+    "title": "Students — NUS Centre for Future-ready Graduates",
+    "url": "https://nus.edu.sg/cfg/students",
+    "publisher": "新加坡国立大学 NUS",
+    "checked_at": "2026-11-13",
+    "supports": "本校招聘宣讲和行业活动安排。",
+    "status": "verified",
+    "notes": "八至十月及一至三月指该校宣讲节奏；过往活动不当作当前招聘。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-AU-01",
+    "region": "澳大利亚",
+    "title": "Temporary Graduate visa 485 — Post-Higher Education Work stream",
+    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/post-higher-education-work",
+    "publisher": "澳大利亚内政部",
+    "checked_at": "2026-11-13",
+    "supports": "该类别的一般年龄、境内申请、学历学习要求、近期学生签证与分条件停留年限。",
+    "status": "partial",
+    "notes": "官方搜索索引正文可读取；直接打开动态页仅返回页面外壳。以原站对应类别最新条件核验；不采纳索引中未更新的家属后续入境说法。 动态页面仅返回外壳；官方索引可读取支持内容，申请前须在原站复核。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "dynamic_shell",
+      "details": "动态页面仅返回外壳；官方索引可读取支持内容，申请前须在原站复核。"
+    }
+  },
+  {
+    "id": "S-AU-02",
+    "region": "澳大利亚",
+    "title": "Check visa details and conditions",
+    "url": "https://immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions",
+    "publisher": "澳大利亚内政部",
+    "checked_at": "2026-11-13",
+    "supports": "VEVO 显示当前生效签证及其条件，不显示尚未生效的签证权益。",
+    "status": "verified",
+    "notes": "用于指导读者核对当前工作权。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-AU-03",
+    "region": "澳大利亚",
+    "title": "How to find a job",
+    "url": "https://www.sydney.edu.au/careers/students/finding-jobs/how-to-find-a-job.html",
+    "publisher": "悉尼大学",
+    "checked_at": "2026-11-13",
+    "supports": "CareerHub、招聘会、雇主官网，以及部分次年入职 graduate programme 从当年三月起招聘的提醒。",
+    "status": "verified",
+    "notes": "为该校职业指导中的一般节奏；岗位日期始终以雇主原文为准。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-AU-04",
+    "region": "澳大利亚",
+    "title": "How to write a resume",
+    "url": "https://www.sydney.edu.au/careers/students/applying-for-jobs/how-to-write-a-resume.html",
+    "publisher": "悉尼大学",
+    "checked_at": "2026-11-13",
+    "supports": "按岗位调整简历、行业长度差异、个人信息与签证工作权表述建议。",
+    "status": "verified",
+    "notes": "不规定所有澳洲简历都必须一页。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-AU-05",
+    "region": "澳大利亚",
+    "title": "Addressing selection criteria",
+    "url": "https://www.sydney.edu.au/careers/students/applying-for-jobs/addressing-selection-criteria.html",
+    "publisher": "悉尼大学",
+    "checked_at": "2026-11-13",
+    "supports": "独立 selection criteria 陈述、网申回应与求职信等不同形式。",
+    "status": "verified",
+    "notes": "仅当岗位要求时提供相应材料，不默认全部雇主都要求。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-AU-06",
+    "region": "澳大利亚",
+    "title": "Migration Amendment (Temporary Graduate Visa Reform) Regulations 2026 — F2026L01500",
+    "url": "https://www.legislation.gov.au/F2026L01500/asmade/text",
+    "publisher": "澳大利亚 Federal Register of Legislation",
+    "checked_at": "2026-11-13",
+    "supports": "2026-11-13 生效；调整 485 附属申请资格及与主申请同时合并申请，对生效日及之后申请适用。",
+    "status": "verified",
+    "notes": "已点击 Document 读取法规原文的生效表、1229(3) 与过渡适用条款；家庭例外未在本册逐项展开。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-NZ-01",
+    "region": "新西兰",
+    "title": "Post-Study Work Visa",
+    "url": "https://www.immigration.govt.nz/visas/post-study-work-visa/",
+    "publisher": "新西兰移民局 INZ",
+    "checked_at": "2026-11-13",
+    "supports": "PSWV 的资格、申请窗口按情形区分；部分未来资格扩展日期。",
+    "status": "partial",
+    "notes": "2026-11-13 实际打开正文显示资格扩展为11月23日；另一官方公告仍为11月16日。基础路径可核验，扩展日期待官方澄清。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-NZ-02",
+    "region": "新西兰",
+    "title": "Qualifications needed for a Post-Study Work Visa",
+    "url": "https://www.immigration.govt.nz/study/after-you-finish-your-study/qualifications-needed-for-a-post-study-work-visa/",
+    "publisher": "新西兰移民局 INZ",
+    "checked_at": "2026-11-13",
+    "supports": "学位与非学位资格、全日制学习条件及部分非学位资格的相关工作要求。",
+    "status": "verified",
+    "notes": "需按完整资格名称核对；不以 level 数字单独判断。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-NZ-03",
+    "region": "新西兰",
+    "title": "Post-Study Work Visa eligibility extended from 16 November 2026",
+    "url": "https://www.immigration.govt.nz/about-us/news-centre/post-study-work-visa-eligibility-extended-from-16-november-2026/",
+    "publisher": "新西兰移民局 INZ",
+    "checked_at": "2026-11-13",
+    "supports": "2026-09-10 公告中对未来 Graduate Diploma 扩展的说明及其日期。",
+    "status": "partial",
+    "notes": "与实际读取主页面的11月23日冲突；核验日早于两日期，均不作为已生效个人资格。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-NZ-04",
+    "region": "新西兰",
+    "title": "Getting a job when you graduate",
+    "url": "https://www.auckland.ac.nz/en/business/current-students/student-support/careers-centre/international-students/getting-a-job.html",
+    "publisher": "奥克兰大学",
+    "checked_at": "2026-11-13",
+    "supports": "Graduate training programmes 与全年 direct entry 空缺的区别、面向国际学生的求职指导。",
+    "status": "verified",
+    "notes": "该校说明为路线参考，不代表所有行业招聘期限。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-NZ-05",
+    "region": "新西兰",
+    "title": "Your CV and cover letter",
+    "url": "https://www.auckland.ac.nz/en/business/current-students/student-support/careers-centre/apply-for-jobs/cv-coverletter.html",
+    "publisher": "奥克兰大学",
+    "checked_at": "2026-11-13",
+    "supports": "按岗位定制 CV 和 cover letter、检查材料一致性。",
+    "status": "verified",
+    "notes": "不复制学校示例或学生案例。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-NZ-06",
+    "region": "新西兰",
+    "title": "How we can help you",
+    "url": "https://www.auckland.ac.nz/en/business/current-students/student-support/careers-centre/international-students/how-we-can-help-you.html",
+    "publisher": "奥克兰大学",
+    "checked_at": "2026-11-13",
+    "supports": "学生职业规划、职位简报、雇主活动与申请反馈服务，学校不负责安置工作。",
+    "status": "verified",
+    "notes": "示例服务面向该校相应学生。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-MO-01",
+    "region": "澳门",
+    "title": "专业、非专业外地雇员申请须知",
+    "url": "https://www.dsal.gov.mo/zh_tw/standard/nrworker_faq_pro.html",
+    "publisher": "澳门劳工事务局",
+    "checked_at": "2026-11-13",
+    "supports": "雇主先申请聘用许可，再向治安警察局办理受聘者逗留许可，获相应许可后工作。",
+    "status": "verified",
+    "notes": "未由此推定某位毕业生或雇主必然获批。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-MO-02",
+    "region": "澳门",
+    "title": "UM Student Job Vacancy System",
+    "url": "https://scs.sao.um.edu.mo/career-development-centre/student/career-services/job-hunting-platforms/local-employment/job-vacancy-e-system-for-students/",
+    "publisher": "澳门大学学生事务部",
+    "checked_at": "2026-11-13",
+    "supports": "学校职位系统及非本地学生的受薪／无薪活动许可提示。",
+    "status": "partial",
+    "notes": "岗位展示不等于所有学生可合法接受。 直接打开返回503；官方搜索索引支持所列内容，不能据此认定链接永久失效。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "unavailable",
+      "details": "直接打开返回503；官方搜索索引支持所列内容，不能据此认定链接永久失效。"
+    }
+  },
+  {
+    "id": "S-MO-03",
+    "region": "澳门",
+    "title": "Student Counselling Section — New Student Handbook",
+    "url": "https://nsh.sao.um.edu.mo/scs/",
+    "publisher": "澳门大学",
+    "checked_at": "2026-11-13",
+    "supports": "校友导师、职业培训、招聘会与职位系统等本校资源。",
+    "status": "partial",
+    "notes": "活动权限及当年时间应再次向本校确认。 直接打开超时；官方搜索索引支持所列内容，实时可达性未确认。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "timeout",
+      "details": "直接打开超时；官方搜索索引支持所列内容，实时可达性未确认。"
+    }
+  },
+  {
+    "id": "S-TW-01",
+    "region": "台湾",
+    "title": "大陆地区人民来台就读专科以上学校办法",
+    "url": "https://edu.law.moe.gov.tw/LawContent.aspx?id=GL000477",
+    "publisher": "教育部主管法规共用系统",
+    "checked_at": "2026-11-13",
+    "supports": "第十五条在学工作限制；第十八条毕业离境及继续就学相关规定。",
+    "status": "verified",
+    "notes": "已读取官方现行条文；不将该身份与侨外生混同。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-TW-02",
+    "region": "台湾",
+    "title": "政府开放陆生报考技术士技能检定与工作资格问答",
+    "url": "https://www.mac.gov.tw/News_Content.aspx?n=F9057F9640B28033&s=AC317A803EE4C30F&sms=7C8440BC86E48FD9",
+    "publisher": "大陆委员会",
+    "checked_at": "2026-11-13",
+    "supports": "2025-11-11 问答：技能检定不等于工作资格，陆生毕业留台工作尚未开放。",
+    "status": "partial",
+    "notes": "适用官方认定的大陆学生身份，特殊身份另查。 直接打开返回403；官方搜索索引支持所列内容，实时正文访问仍待确认。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "blocked",
+      "details": "直接打开返回403；官方搜索索引支持所列内容，实时正文访问仍待确认。"
+    }
+  },
+  {
+    "id": "S-TW-03",
+    "region": "台湾",
+    "title": "毕业侨外生留台工作",
+    "url": "https://ezworktaiwan.wda.gov.tw/Content_List.aspx?n=90B5EEEBE3049C9B",
+    "publisher": "劳动部劳动力发展署",
+    "checked_at": "2026-11-13",
+    "supports": "侨外生工作制度的单独适用范围与核验入口。",
+    "status": "verified",
+    "notes": "仅用于说明制度区分，不给大陆学生套用其中评点及延期居留规则。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-KR-01",
+    "region": "韩国",
+    "title": "Job Seeker (D-10) Visa Scheme Improvements",
+    "url": "https://www.immigration.go.kr/bbs/moj/189/601114/artclView.do",
+    "publisher": "韩国法务部／出入境外国人政策本部",
+    "checked_at": "2026-11-13",
+    "supports": "符合条件的韩国高校毕业生 D-10 求职停留及实习安排的改进。",
+    "status": "verified",
+    "notes": "2025-12-02 官方英文说明，明确是韩国国内高校毕业生适用群体。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-KR-02",
+    "region": "韩国",
+    "title": "D-10 制度主要改进与实施日说明",
+    "url": "https://www.immigration.go.kr/bbs/moj/182/486418/download.do",
+    "publisher": "韩国法务部／出入境外国人政策本部",
+    "checked_at": "2026-11-13",
+    "supports": "D-10 改进内容与2025-10-29实施日。",
+    "status": "verified",
+    "notes": "韩文官方附件；具体评分和个人资格未在本册穷尽。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-KR-03",
+    "region": "韩国",
+    "title": "Employment in Korea — Job Search",
+    "url": "https://studykorea.go.kr/ko/work/aboutKoreaEmployment.do?tab=job-search",
+    "publisher": "Study in Korea（韩国政府运营）",
+    "checked_at": "2026-11-13",
+    "supports": "招聘渠道、履历及自我介绍格式、提交前保存副本和一般选拔流程。",
+    "status": "partial",
+    "notes": "页面流程为一般介绍，不当作每家雇主完全相同的流程。 直接打开超时；官方搜索索引支持所列内容，实时可达性未确认。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "timeout",
+      "details": "直接打开超时；官方搜索索引支持所列内容，实时可达性未确认。"
+    }
+  },
+  {
+    "id": "S-KR-04",
+    "region": "韩国",
+    "title": "Residence and Stay Information — Job-Seeking Visa",
+    "url": "https://studyinkorea.go.kr/en/life/residenceAndStayInfo.do",
+    "publisher": "Study in Korea（韩国政府运营）",
+    "checked_at": "2026-11-13",
+    "supports": "求职与正式就业类型区分，以及本次发现的旧年限表述。",
+    "status": "partial",
+    "notes": "仍显示最长两年、每次六个月等旧口径；仅作为冲突记录，不用于覆盖更新的法务部规则。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-MY-01",
+    "region": "马来西亚",
+    "title": "Graduate Pass",
+    "url": "https://visa.educationmalaysia.gov.my/graduate-pass/",
+    "publisher": "Education Malaysia Global Services（EMGS）",
+    "checked_at": "2026-11-13",
+    "supports": "中国公民适用延伸至2026-12-31、品行证明、有效学生准证等条件。",
+    "status": "verified",
+    "notes": "这是政策服务延伸期限，不是个人准证到期日；2027续展未核验。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-MY-02",
+    "region": "马来西亚",
+    "title": "FAQ — Graduate (Social) Visit Pass",
+    "url": "https://www.imi.gov.my/index.php/en/contact-us/frequently-ask-question/faq-graduate-social-visit-pass/",
+    "publisher": "马来西亚移民局",
+    "checked_at": "2026-11-13",
+    "supports": "Graduate Pass 为长期社交访问安排，工作仅限准许领域兼职；基本学历、身份、材料要求。",
+    "status": "verified",
+    "notes": "以移民局限定表述为准，不采用营销页容易误读为无限制全职工作的概括。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-MY-03",
+    "region": "马来西亚",
+    "title": "Graduate Employability and Career Centre",
+    "url": "https://gecc.um.edu.my/",
+    "publisher": "马来亚大学",
+    "checked_at": "2026-11-13",
+    "supports": "学校职业发展、招聘活动与学生机会入口。",
+    "status": "verified",
+    "notes": "公开入口已核验，具体机会和账户权限需读者按本校现行规则确认。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-AE-01",
+    "region": "阿联酋",
+    "title": "Jobseeker visit visa",
+    "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/jobseeker-visit-visa",
+    "publisher": "阿联酋政府官方门户",
+    "checked_at": "2026-11-13",
+    "supports": "求职访问时长选项与学历、技能／指定高校毕业、资金担保等条件。",
+    "status": "partial",
+    "notes": "本册只给资格核验方法，不推定任何海外毕业生都适用。 直接打开超时；官方搜索索引支持所列内容，实时可达性未确认。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "timeout",
+      "details": "直接打开超时；官方搜索索引支持所列内容，实时可达性未确认。"
+    }
+  },
+  {
+    "id": "S-AE-02",
+    "region": "阿联酋",
+    "title": "Tips to stay safe from labour and visa fraud",
+    "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/tips-to-avoid-labour-and-visa-fraud",
+    "publisher": "阿联酋政府官方门户",
+    "checked_at": "2026-11-13",
+    "supports": "访问／旅游签证不授予工作权、正式聘用文件的官方核查方法。",
+    "status": "partial",
+    "notes": "MOHRE 文件核验表述限定适用聘用情形；自由区及其他主管机构另列缺口。 直接打开未取得可读正文；已读取官方搜索索引，实时正文仍待确认。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "empty",
+      "details": "直接打开未取得可读正文；已读取官方搜索索引，实时正文仍待确认。"
+    }
+  },
+  {
+    "id": "S-AE-03",
+    "region": "阿联酋",
+    "title": "Career Services",
+    "url": "https://www.aus.edu/life-at-aus/career-services",
+    "publisher": "American University of Sharjah",
+    "checked_at": "2026-11-13",
+    "supports": "职业门户、简历与求职信指导、模拟面试、实习协调等本校服务。",
+    "status": "verified",
+    "notes": "未采纳网页上的学生案例或就业结果。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  },
+  {
+    "id": "S-AE-04",
+    "region": "阿联酋",
+    "title": "AUS Career Fair 2026",
+    "url": "https://www.aus.edu/aus-career-fair-2026",
+    "publisher": "American University of Sharjah",
+    "checked_at": "2026-11-13",
+    "supports": "招聘会面向本校学生、校友及受邀雇主的资格限制示例。",
+    "status": "verified",
+    "notes": "活动已过去，只用于解释资源权限，不宣传为仍可报名的活动。",
+    "link_check": {
+      "checked_at": "2026-11-13",
+      "method": "official web open",
+      "status": "readable",
+      "details": "官方页面或PDF正文可读取。"
+    }
+  }
+]
