@@ -8,7 +8,7 @@
 
 免费中文正文、PDF、网站、可编辑模板与生成源完整开放，无需购买服务或先加微信。
 
-**在线阅读与下载：[中国留学生求职全局攻略](https://aipmandy.github.io/chinese-international-student-career-guide/)**。网站已公开上线并实际访问验证。GitHub新仓库尚未创建，具体权限阻塞与验收范围见[验证记录](docs/verification.md)。
+**在线阅读与下载：[中国留学生求职全局攻略](https://aipmandy.github.io/chinese-international-student-career-guide/)**。网站已公开上线并实际访问验证。源码、PDF 与模板已上传至 [GitHub 仓库](https://github.com/AIPMAndy/chinese-international-student-career-guide)；历史核验记录见[验证记录](docs/verification.md)。
 
 ## 从你现在的位置开始
 
