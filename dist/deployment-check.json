@@ -1,0 +1,11 @@
+{
+  "source_commit": "48d665fd82c226989b898e9f7e98305018365439",
+  "pdf_pages": 81,
+  "html_pages": 50,
+  "pdf_visual_review": {
+    "method": "Rendered PDF sample pages inspected after downloading the GitHub Actions artifact",
+    "pages": [1, 2, 3, 6, 11, 21, 41, 81],
+    "result": "No clipping or missing Chinese glyphs observed on the sampled pages; not a claim of exhaustive page-by-page review"
+  },
+  "deployment_status": "Verify the GitHub Pages workflow; this file alone does not establish that the website is live"
+}
