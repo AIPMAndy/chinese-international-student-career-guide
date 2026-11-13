@@ -2,6 +2,7 @@
 """Validate the released PDF and render every page for human visual review."""
 import argparse
 import hashlib
+from datetime import datetime, timezone
 import json
 from pathlib import Path
 import fitz
@@ -20,11 +21,14 @@ def main():
     page_object_ids = {p.indirect_reference.idnum for p in reader.pages}
     page_records, errors, fonts_used = [], [], set()
     internal, external = 0, 0
+    external_urls = []
+    all_text = []
     render_dir = ROOT / 'tmp/pdfs/final'
     if args.render:
         render_dir.mkdir(parents=True, exist_ok=True)
     for i, page in enumerate(doc):
         text = page.get_text()
+        all_text.append(text)
         spans = [s for b in page.get_text('dict')['blocks'] if 'lines' in b
                  for l in b['lines'] for s in l['spans']]
         fonts_used.update(s['font'] for s in spans)
@@ -46,9 +50,17 @@ def main():
                     errors.append({'page': i+1, 'error': 'invalid internal link'})
             elif annot.get('/A', {}).get('/S') == '/URI':
                 external += 1
+                external_urls.append(str(annot['/A'].get('/URI', '')))
         page_records.append({'page': i+1, 'characters': len(text), 'outside_page_spans': len(outside)})
         if args.render:
             page.get_pixmap(matrix=fitz.Matrix(1.3,1.3), alpha=False).save(render_dir / f'page-{i+1:03d}.png')
+    extracted = '\n'.join(all_text)
+    for marker in ('AIPMAndy', 'metaver.vip', 'www.a6no1.cn'):
+        if marker not in extracted:
+            errors.append({'error': 'required brand/contact text missing', 'marker': marker})
+    for expected in ('https://metaver.vip/', 'https://www.a6no1.cn/'):
+        if expected not in external_urls:
+            errors.append({'error': 'required official website PDF link missing', 'url': expected})
     for level, title, page in doc.get_toc():
         if not 1 <= page <= len(doc):
             errors.append({'bookmark': title, 'error': 'invalid target'})
@@ -70,8 +82,9 @@ def main():
             for n,img in enumerate(imgs,start):
                 canvas.paste(img,(x,32));draw.text((x,12),f'PDF PAGE {n}',fill='black');x+=img.width+24
             canvas.save(render_dir/f'pair-{start:03d}-{start+len(imgs)-1:03d}.jpg',quality=89)
-    result = {'checked_at':'2026-11-13','filename':PDF.name,'sha256':hashlib.sha256(PDF.read_bytes()).hexdigest(),
+    result = {'checked_at':datetime.now(timezone.utc).isoformat(),'filename':PDF.name,'sha256':hashlib.sha256(PDF.read_bytes()).hexdigest(),
               'pages':len(doc),'bookmarks':len(doc.get_toc()),'internal_links':internal,'external_links':external,
+              'official_links_verified':['https://metaver.vip/', 'https://www.a6no1.cn/'],
               'fonts_used':sorted(fonts_used),'embedded_fonts':font_files,'font_coverage':coverage,
               'all_pages_rendered':bool(args.render),'errors':errors,'pages_detail':page_records,
               'scope':'Automated structure, links, extracted text bounds and font checks. Human per-page layout review is recorded separately.'}
