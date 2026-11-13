@@ -2,7 +2,7 @@
 
 本文件记录本项目的构建边界和可重复执行步骤。版本：v1.0.0；核对日期：2026-11-13。所有命令均应在 `chinese-international-student-career-guide` 项目根目录执行。
 
-公开网站已上线：<https://aipmandy.github.io/chinese-international-student-career-guide/>。GitHub 目标名称是 `AIPMAndy/chinese-international-student-career-guide`；该仓库尚未创建。实际发布状态和验证边界见[验证记录](verification.md)。
+公开网站已上线：<https://aipmandy.github.io/chinese-international-student-career-guide/>。公开仓库为 [AIPMAndy/chinese-international-student-career-guide](https://github.com/AIPMAndy/chinese-international-student-career-guide)，源码和成品已推送到 `main`。实际发布状态和验证边界见[验证记录](verification.md)。
 
 ## 1. 文件来源与构建顺序
 
@@ -42,7 +42,7 @@ python3 scripts/build_site.py \
 python3 website/check_links.py
 ```
 
-确认新 GitHub 仓库确实存在后，才添加 `--repo-url` 参数并填入 API 或网页返回的真实仓库 URL。不要把计划名称先写成已发布链接。
+构建时使用 `--repo-url https://github.com/AIPMAndy/chinese-international-student-career-guide`，将源码入口连接到已核实的正式仓库。
 
 `downloads/` 的文件会复制到 `dist/downloads/`，`templates/` 会复制到 `dist/templates/`。缺失文件不会出现假下载按钮。构建采用增量覆盖；删除或改名正文时，也应检查 `dist/` 中是否还有旧的生成页面，再重新验证。
 
@@ -108,11 +108,13 @@ python3 website/check_links.py
 
 外部来源链接的可访问性和政策内容核验分开记录。登录墙、动态渲染限制或官方页面冲突应保留原状态，不能改写成“全部通过”。
 
-## 6. GitHub 首次发布脚本
+## 6. GitHub 首次发布脚本（历史说明）
+
+本项目仓库已存在，后续更新应审阅并推送到该仓库的 `main`，不要重复创建仓库或重跑首次建仓命令。以下说明保留首次发布脚本的边界；网站唯一正式部署目标见第 8 节及 [DEPLOYMENT.md](../DEPLOYMENT.md)。
 
 脚本位于 `scripts/publish-github.sh`。不带参数或传入 `--help` 只显示说明。脚本仅负责首次创建精确的新仓库，并推送已审阅的 `main` 与 `v1.0.0`；不会登录、切换账号、改写 `origin`、强推、删仓库或创建 Release。
 
-先在当前新项目中准备提交。如果该目录已有 Sites Git 仓库，沿用它；不要再次初始化或改它的 `origin`。只有尚未初始化时才执行：
+先在当前新项目中准备提交。先检查当前 Git 根与远端，确认只对应本项目。不要把内容推送到历史 Sites 远端。仅对尚未初始化的独立目录执行：
 
 ```bash
 git init -b main
@@ -167,13 +169,15 @@ gh release create v1.0.0 \
 
 创建后读取 Release，实际打开每个附件。已有同名 Release 或资产时先检查，不使用覆盖参数自动替换。
 
-## 8. 可选 GitHub Pages
+## 8. GitHub Pages 正式部署
 
-主要网站可以独立发布到 Sites；`origin` 保留其用途。GitHub Pages 是可选的另一静态部署目标，工作流位于 `.github/workflows/pages.yml`。
+正式网站仅使用本项目的 GitHub Pages：https://aipmandy.github.io/chinese-international-student-career-guide/。工作流位于 `.github/workflows/pages.yml`，部署已提交并验收的 `dist/`，不在远端重新生成 PDF。
 
-该工作流仅由 `workflow_dispatch` 手动触发，只接受本项目 `main`。它检查已提交的 `dist/` 并上传这个目录，不安装 npm，不改正文，不重新生成 PDF，也不触碰其他仓库。
+推送 `main` 中的 `dist/`、Pages 工作流或链接检查脚本会自动触发部署，也支持 `workflow_dispatch` 手动运行。工作流限制精确仓库和 `main`，使用 `github-pages` 环境以及部署所需的最小权限。
 
-要使用 Pages，在**本项目**的 Settings → Pages → Build and deployment 中选择 GitHub Actions，再到 Actions 手动运行工作流。实际地址以部署 job 输出的 `page_url` 为准，不预填未上线的 Pages 地址。工作流使用 `github-pages` 环境和部署所需的 `pages: write`、`id-token: write` 权限。
+本仓库 Settings → Pages 的 Source 使用 GitHub Actions。部署后会对首页、正文、CSS、JS、PDF、XLSX、模板 ZIP 与源码 ZIP 发起真实 HTTP 请求，并将响应的 SHA-256 与该提交 `dist/` 中的文件逐项比对；不一致会使工作流失败。
+
+[已验证的成功运行](https://github.com/AIPMAndy/chinese-international-student-career-guide/actions/runs/43487144595) 对应提交 `0d22d503acc99760e3950172946dab471c0521ba`，8 项线上文件检查均返回 HTTP 200 且 SHA-256 一致。后续更新以各自运行结果为准。
 
 官方依据（2026-11-13 核对）：[自定义 GitHub Pages 工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)、[配置发布来源](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)、[GitHub CLI 新建仓库](https://cli.github.com/manual/gh_repo_create)、[GitHub CLI 新建 Release](https://cli.github.com/manual/gh_release_create)。如 GitHub 将来调整 action 版本，先对照官方说明再修改工作流。
 
