@@ -2,7 +2,7 @@ name: Deploy verified handbook to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['dist/**']
+    paths: ['dist/**', '.github/workflows/pages.yml', 'scripts/check_pages_links.py']
   workflow_dispatch:
 permissions:
   contents: read
@@ -33,3 +33,38 @@ jobs:
           path: dist
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify published HTML, assets and downloads
+        env:
+          LIVE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          import time
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+
+          base = os.environ['LIVE_URL'].rstrip('/') + '/'
+          paths = ["index.html","guide-00-start.html","assets/style.css","assets/app.js","downloads/chinese-international-student-career-guide.pdf","templates/career-workbook.xlsx","downloads/editable-templates.zip","downloads/source-code.zip"]
+          for path in paths:
+              expected = (Path('dist') / path).read_bytes()
+              expected_hash = hashlib.sha256(expected).hexdigest()
+              url = base + path
+              for attempt in range(8):
+                  try:
+                      request = Request(url, headers={'User-Agent': 'Andy-Guide-Pages-Verification/1.0', 'Accept-Encoding': 'identity', 'Cache-Control': 'no-cache'})
+                      with urlopen(request, timeout=20) as response:
+                          data = response.read()
+                          status = response.status
+                      actual_hash = hashlib.sha256(data).hexdigest()
+                      if status != 200 or actual_hash != expected_hash:
+                          raise RuntimeError(f'Published file differs from committed dist: {url}; HTTP {status}')
+                      print('HTTP VERIFIED ' + json.dumps({'url': url, 'status': status, 'bytes': len(data), 'sha256': actual_hash}), flush=True)
+                      break
+                  except Exception as exc:
+                      if attempt == 7:
+                          raise
+                      print(f'Retry {attempt + 1}/8 for {url}: {exc}', flush=True)
+                      time.sleep(3)
+          PY
