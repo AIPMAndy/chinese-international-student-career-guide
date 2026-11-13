@@ -2,7 +2,7 @@ name: Deploy verified handbook to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['dist/**', '.github/workflows/pages.yml', 'scripts/check_pages_links.py']
+    paths: ['dist/**', '.github/workflows/pages.yml', 'scripts/build_site.py', 'scripts/package_release.py', 'scripts/check_seo.py', 'scripts/check_pages_links.py', 'website/**', 'content/**', 'data/**', 'templates/**', 'downloads/**']
   workflow_dispatch:
 permissions:
   contents: read
@@ -25,6 +25,14 @@ jobs:
       - uses: actions/checkout@v6
         with:
           persist-credentials: false
+      - name: Rebuild archives and site from authoritative sources
+        run: |
+          python3 scripts/package_release.py
+          python3 scripts/build_site.py \
+            --base-url https://aipmandy.github.io/chinese-international-student-career-guide/ \
+            --repo-url https://github.com/AIPMAndy/chinese-international-student-career-guide
+      - name: Verify metadata, canonical URLs, sitemap and author entities
+        run: python3 scripts/check_seo.py
       - name: Check pages, project subpath and all downloads
         run: python3 scripts/check_pages_links.py --require downloads/chinese-international-student-career-guide.pdf --require downloads/source-code.zip --require downloads/editable-templates.zip --require templates/career-workbook.xlsx
       - uses: actions/configure-pages@v5
