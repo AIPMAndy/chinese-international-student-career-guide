@@ -40,7 +40,11 @@
 
 只读检查AIPMAndy现有仓库，重点读取两个指定项目的目录和相关正文，见 [repository-audit.md](repository-audit.md)。候选名称在本次可见范围未发现冲突。全部写入位于本任务新项目；未修改个人主页、总导航、个人网站或其他已有仓库。
 
-GitHub尚未发布。真实阻塞：当前连接没有新建仓库操作，本地gh未登录，浏览器新建页要求登录。未将计划地址伪装成可访问仓库。提供 [首次发布脚本](../scripts/publish-github.sh)、[发布说明](build-and-publish.md) 与 [Release文案](release-notes-v1.0.0.md)。脚本已做语法与默认帮助检查，未执行远端创建或推送。
+GitHub 公开仓库 [AIPMAndy/chinese-international-student-career-guide](https://github.com/AIPMAndy/chinese-international-student-career-guide) 已创建，源码、PDF、模板与网站已推送。正式网站采用 [GitHub Pages](https://aipmandy.github.io/chinese-international-student-career-guide/)。
+
+[Pages 成功运行](https://github.com/AIPMAndy/chinese-international-student-career-guide/actions/runs/43487144595) 对应提交 `0d22d503acc99760e3950172946dab471c0521ba`。本次发布先检查 50 个 HTML 页面、2,032 个引用及必需下载，再对首页、正文、CSS、JS、PDF、XLSX、模板 ZIP 与源码 ZIP 共 8 个实际 URL 发起 HTTP GET；均返回 200，且 SHA-256 与此提交的 `dist/` 一致。
+
+此前未建仓、未登录以及早期预览的记录属于历史阶段，不再代表当前发布状态。上述新工作流日志是本次 GitHub Pages 访问与下载验证依据；此前 `live-http-validation.json` 保留为历史记录，不作为本次提交的重新验收。实体手机、Excel/WPS 原生兼容性边界保持不变。
 
 ## 地区缺口
 
