@@ -2,7 +2,7 @@ name: Deploy verified handbook to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['dist/**', '.github/workflows/pages.yml', 'scripts/build_site.py', 'scripts/package_release.py', 'scripts/check_seo.py', 'scripts/check_pages_links.py', 'website/**', 'content/**', 'data/**', 'templates/**', 'downloads/**']
+    paths: ['dist/**', '.github/workflows/pages.yml', 'scripts/build_site.py', 'scripts/package_release.py', 'scripts/check_seo.py', 'scripts/check_pages_links.py', 'website/**', 'content/**', 'data/**', 'templates/**', 'downloads/**', 'README.md', 'DEPLOYMENT.md', 'PUBLISH.md', 'AGENTS.md']
   workflow_dispatch:
 permissions:
   contents: read
