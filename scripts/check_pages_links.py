@@ -73,11 +73,15 @@ def main():
         if not raw or raw == "#": continue
         value = urlsplit(urljoin(base + source, raw))
         if value.scheme not in {"http", "https"}: continue
+        if value.netloc.lower() == origin.netloc.lower() and not value.path.startswith(origin.path):
+            sibling_prefixes = ("/chinese-international-student-product-jobs/", "/chinese-international-student-ai-jobs/", "/chinese-international-student-business-jobs/")
+            if any(value.path.startswith(prefix) for prefix in sibling_prefixes):
+                external += 1
+                continue
+            fail(f"{source}:{line}", raw, "Link escapes the GitHub Pages project subpath")
+            continue
         if value.netloc.lower() != origin.netloc.lower():
             external += 1
-            continue
-        if not value.path.startswith(origin.path):
-            fail(f"{source}:{line}", raw, "Link escapes the GitHub Pages project subpath")
             continue
         target = (site / unquote(value.path[len(origin.path):])).resolve()
         if not target.is_relative_to(site):
