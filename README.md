@@ -110,7 +110,7 @@ AI 可以帮助整理原文、检查材料一致性和练习表达，不能虚�
 
 ## 项目边界与证据
 
-本项目在只读查阅已有求职项目后独立建设，新增留学生的跨地区路线、四类日期、身份条件核验、当地资源和回国衔接。具体查阅版本与差异见[仓库查重记录](docs/repository-audit.md)。本册负责通用路线，AI、产品、商科等专业能力训练由独立专题承担；地址核实存在后再连接。
+本项目在只读查阅已有求职项目后独立建设，新增留学生的跨地区路线、四类日期、身份条件核验、当地资源和回国衔接。具体查阅版本与差异见[仓库查重记录](docs/repository-audit.md)。本册负责跨地区通用求职路线。已公开的独立专业专题：[AI 技术岗位](https://aipmandy.github.io/chinese-international-student-ai-jobs/)、[产品岗位](https://aipmandy.github.io/chinese-international-student-product-jobs/)、[商科岗位](https://aipmandy.github.io/chinese-international-student-business-jobs/)。不同国家的工作资格仍需查看当地现行官方原文。
 
 公开内容不使用未经核实和授权的学校、客户、Offer、薪资或成功率案例。作者背景与服务经历由作者提供；本版没有用虚构个案填补实操内容。
 
