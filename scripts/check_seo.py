@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "dist"
 BASE = "https://aipmandy.github.io/chinese-international-student-career-guide/"
-AUTHOR = "AI 酋长 Andy"
+AUTHOR = "AI酋长Andy"
 BRAND_URL = "https://www.a6no1.cn/"
 PERSON_URL = "https://metaver.vip/"
 

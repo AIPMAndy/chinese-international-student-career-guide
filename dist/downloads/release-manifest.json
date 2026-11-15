@@ -4,18 +4,18 @@
   "artifacts": [
     {
       "file": "editable-templates.zip",
-      "bytes": 61106,
-      "sha256": "5e7db9fc2dedcf27692bbdade22de07ed1e094d37f0990f7d4e825c18d50d80c"
+      "bytes": 61085,
+      "sha256": "9ee79decdd34252d56e414e9908e669383f4e107f9b3790ab2e03dcda758ec53"
     },
     {
       "file": "source-code.zip",
-      "bytes": 1138144,
-      "sha256": "9a69c44f34ea40cd512f418923b0e3c6d2b076193c820e7a08555b207576bc61"
+      "bytes": 1138273,
+      "sha256": "2c9a81553bc74be6eca3b522cd8e147bc9aedc591177fa77508431fa5ddc549f"
     },
     {
       "file": "downloads/chinese-international-student-career-guide.pdf",
-      "bytes": 674065,
-      "sha256": "96aea233c379fbb7822b5011dddfebd7979ea72f8ebed9c07088b65712188a3e"
+      "bytes": 674883,
+      "sha256": "a02965163a304a637f6a06bdfb76b20d0d16fad4425b4430b7938e9a8e38c000"
     },
     {
       "file": "templates/career-workbook.xlsx",

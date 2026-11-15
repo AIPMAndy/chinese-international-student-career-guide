@@ -11,7 +11,7 @@ const reviewDir = path.join(outputDir, 'review');
 await fs.mkdir(dir, { recursive: true });
 await fs.mkdir(reviewDir, { recursive: true });
 const version = '2026-11-13';
-const brand = '作者：AI 酋长 Andy｜微信：AIPMAndy｜公众号：AI酋长Andy';
+const brand = '作者：AI酋长Andy｜微信：AIPMAndy｜公众号：AI酋长Andy';
 const links = '个人官网：https://metaver.vip/\n公司官网：https://www.a6no1.cn/';
 
 const schemas = [
@@ -111,7 +111,7 @@ const schemas = [
 const excelCol = n => { let t=''; for (let x=n; x>0; x=Math.floor((x-1)/26)) t=String.fromCharCode(65+(x-1)%26)+t; return t; };
 const csv = rows => '\uFEFF'+rows.map(row=>row.map(x=>'"'+String(x??'').replaceAll('"','""')+'"').join(',')).join('\r\n')+'\r\n';
 for (const t of schemas) await fs.writeFile(path.join(dir,t.filename),csv([t.headers,...Array.from({length:5},()=>t.headers.map(()=>''))]));
-await fs.writeFile(path.join(repo,'data','template-schema.json'),JSON.stringify({version,author:'AI 酋长 Andy',templates:schemas.map(({formulas,...rest})=>({...rest,calculated_columns:Object.keys(formulas||{})}))},null,2)+'\n');
+await fs.writeFile(path.join(repo,'data','template-schema.json'),JSON.stringify({version,author:'AI酋长Andy',templates:schemas.map(({formulas,...rest})=>({...rest,calculated_columns:Object.keys(formulas||{})}))},null,2)+'\n');
 
 const wb = Workbook.create();
 const order = ['application-tracker','route-decision','time-plan','eligibility-check','material-checklist','contact-log','interview-review','offer-comparison'];
@@ -159,7 +159,7 @@ guide.showGridLines=false;guide.tabColor='#666666';
 guide.getRange('A1:H65').format={font:{name:font,size:10,color:'#171717'},rowHeight:25,verticalAlignment:'top'};
 guide.getRange('A1:A65').format.columnWidth=20;guide.getRange('B1:B65').format.columnWidth=100;
 guide.getRange('A2').values=[['中国留学生求职工作簿']];guide.getRange('A2').format.font={name:font,size:16,bold:true};
-const intro=[['版本',version],['作者','AI 酋长 Andy'],['微信','AIPMAndy'],['公众号','AI酋长Andy'],['个人官网','https://metaver.vip/'],['公司官网','https://www.a6no1.cn/'],['开始填写','先复制一份私有副本。先填路线和资格，再管理申请。工作簿不含真实个人数据。'],['输入与公式','白底输入，灰底公式。没有工作表保护，公式可编辑；修改前先留副本。'],['日期与时区','日期列输入日期值。雇主截止时刻和时区保留在原文字段；跟进公式只比较日期，不判断跨时区时刻。'],['资格硬门槛','“待确认”不能算符合。路线门槛只提醒核验，不证明你具有工作权利。Offer 门槛不代替合同审查。'],['现金与币种','Offer 收入为你填写的月税后固定现金；股权和不保证奖金不计入。汇率为 1 单位原币折算比较币种。'],['容量与扩展','申请台账预留100行，其余40行，路线和Offer各12行。超过容量时扩展表格、公式、验证和顶端统计范围。'],['数据保护','只在个人副本填申请与身份资料；公开仓库保留空白模板。不要上传护照、身份证、合同、他人联系方式。'],['CSV说明','CSV 不保留公式、下拉和格式。标有“公式”的列须手算或用工作簿。Excel导入选择UTF-8。'],['真实表达','邮件与简历中的方括号必须替换为可核实事实；不适用的句子直接删除。'],['辅助服务','免费模板完整可用。需要个人路线诊断时，可通过微信 AIPMAndy 联系；不承诺录用、薪资或身份资格。']];
+const intro=[['版本',version],['作者','AI酋长Andy'],['微信','AIPMAndy'],['公众号','AI酋长Andy'],['个人官网','https://metaver.vip/'],['公司官网','https://www.a6no1.cn/'],['开始填写','先复制一份私有副本。先填路线和资格，再管理申请。工作簿不含真实个人数据。'],['输入与公式','白底输入，灰底公式。没有工作表保护，公式可编辑；修改前先留副本。'],['日期与时区','日期列输入日期值。雇主截止时刻和时区保留在原文字段；跟进公式只比较日期，不判断跨时区时刻。'],['资格硬门槛','“待确认”不能算符合。路线门槛只提醒核验，不证明你具有工作权利。Offer 门槛不代替合同审查。'],['现金与币种','Offer 收入为你填写的月税后固定现金；股权和不保证奖金不计入。汇率为 1 单位原币折算比较币种。'],['容量与扩展','申请台账预留100行，其余40行，路线和Offer各12行。超过容量时扩展表格、公式、验证和顶端统计范围。'],['数据保护','只在个人副本填申请与身份资料；公开仓库保留空白模板。不要上传护照、身份证、合同、他人联系方式。'],['CSV说明','CSV 不保留公式、下拉和格式。标有“公式”的列须手算或用工作簿。Excel导入选择UTF-8。'],['真实表达','邮件与简历中的方括号必须替换为可核实事实；不适用的句子直接删除。'],['辅助服务','免费模板完整可用。需要个人路线诊断时，可通过微信 AIPMAndy 联系；不承诺录用、薪资或身份资格。']];
 guide.getRange('A4:B19').values=intro;guide.getRange('B4:B19').format.wrapText=true;guide.getRange('A4:B19').format.rowHeight=37;
 let gr=22;
 for(const t of schemas){guide.getRange(`A${gr}:B${gr}`).values=[[t.name,t.purpose]];guide.getRange(`A${gr}:B${gr}`).format={fill:'#1C1C1C',font:{name:font,size:10,bold:true,color:'#FFFFFF'},wrapText:true,rowHeight:37};gr++;
