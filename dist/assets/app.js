@@ -36,6 +36,14 @@
     if (empty) empty.hidden = count !== 0;
   };
   [query,group,status].forEach(control => control?.addEventListener('input', filter));
+  const resetFilters = document.querySelector('[data-region-reset]');
+  resetFilters?.addEventListener('click', () => {
+    if (query) query.value = '';
+    if (group) group.value = '';
+    if (status) status.value = '';
+    filter();
+    query?.focus();
+  });
   if (cards.length) filter();
   document.querySelectorAll('[data-copy-wechat]').forEach(button => button.addEventListener('click', async () => {
     const target = document.querySelector('[data-copy-status]');

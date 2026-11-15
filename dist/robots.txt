@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://aipmandy.github.io/chinese-international-student-career-guide/sitemap.xml
