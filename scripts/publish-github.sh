@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # First publication only. No remote mutation occurs without --publish.
-# Author: AI 酋长 Andy | WeChat: AIPMAndy
+# Author: AI酋长Andy | WeChat: AIPMAndy
 set -euo pipefail
 IFS=$'\n\t'
 

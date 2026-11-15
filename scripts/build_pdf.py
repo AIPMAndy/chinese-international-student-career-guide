@@ -126,7 +126,7 @@ class Cover(Flowable):
         c.resetTransforms();c.setFillColor(INK);c.rect(0,0,W,H,fill=1,stroke=0)
         c.setStrokeColor(colors.HexColor('#4c4c4c'));c.setLineWidth(.6)
         for radius in [130,179,228]:c.circle(W-85,H-146,radius,fill=0,stroke=1)
-        c.setFillColor(colors.white);c.setFont(B,12);c.drawString(M,H-68,'AI 酋长 Andy')
+        c.setFillColor(colors.white);c.setFont(B,12);c.drawString(M,H-68,'AI酋长Andy')
         c.setFont(R,8.8);c.drawString(M,H-91,'GLOBAL CAREER FIELD GUIDE / 2026.11')
         c.setFont(B,39);c.drawString(M,H-235,'中国留学生')
         c.setFont(B,39);c.drawString(M,H-291,'求职全局')
@@ -146,7 +146,7 @@ class Cover(Flowable):
 
 class Book(BaseDocTemplate):
     def __init__(self,path):
-        super().__init__(str(path),pagesize=A4,leftMargin=M,rightMargin=M,topMargin=52,bottomMargin=49,title=TITLE,author='AI 酋长 Andy',subject='中国留学生跨地区求职路线与实操手册',pageCompression=1,allowSplitting=1)
+        super().__init__(str(path),pagesize=A4,leftMargin=M,rightMargin=M,topMargin=52,bottomMargin=49,title=TITLE,author='AI酋长Andy',subject='中国留学生跨地区求职路线与实操手册',pageCompression=1,allowSplitting=1)
         self.current='';self.chapter_pages={}
         f=Frame(M,49,WIDTH,H-101,id='body',leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)
         self.addPageTemplates([PageTemplate(id='Book',frames=f,onPageEnd=self.chrome)])
@@ -157,7 +157,7 @@ class Book(BaseDocTemplate):
         c.drawString(M,H-30,'中国留学生求职全局攻略')
         c.drawRightString(W-M,H-30,self.current[:35])
         c.setStrokeColor(RULE);c.setLineWidth(.4);c.line(M,36,W-M,36)
-        c.setFont(R,7.5);c.drawString(M,23,'AI 酋长 Andy  /  微信 AIPMAndy  /  '+DATE)
+        c.setFont(R,7.5);c.drawString(M,23,'AI酋长Andy  /  微信 AIPMAndy  /  '+DATE)
         c.setFont(B,9);c.drawRightString(W-M,22,f'{doc.page:02d}')
         c.restoreState()
     def afterFlowable(self,f):
@@ -294,7 +294,7 @@ def build(output):
     story+=[PageBreak()]+heading('带着问题，继续往前走','closing','NEXT STEP / 下一步')
     story.append(P('今天不需要解决所有国家、所有岗位。先确认一条可行路线，完成一次真实申请，把下一步记下来。','h2'))
     story.append(P('完整网站与下载：['+SITE+']('+SITE+')'))
-    story.append(P('作者：**AI 酋长 Andy**\n微信：**AIPMAndy**\n公众号：**AI酋长Andy**'))
+    story.append(P('作者：**AI酋长Andy**\n微信：**AIPMAndy**\n公众号：**AI酋长Andy**'))
     story.append(P('个人官网：[metaver.vip](https://metaver.vip/)\n公司官网：[www.a6no1.cn](https://www.a6no1.cn/)'))
     story.append(P('免费内容完整开放。需要个人路线、材料、面试或Offer诊断时，可以备注“留学生求职”联系。先说明地区、毕业日期、目标岗位、卡点与已尝试动作。咨询不承诺录用、薪资或身份资格。'))
     story.append(P('原创文字和模板：CC BY 4.0。网站及构建代码：MIT。第三方来源与字体保留其原有权利。版本 v1.0.0 / '+DATE,'small'))

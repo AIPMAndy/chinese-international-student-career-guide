@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "dist"
 BASE = "https://aipmandy.github.io/chinese-international-student-career-guide/"
-AUTHOR = "AI 酋长 Andy"
+AUTHOR = "AI酋长Andy"
 BRAND_URL = "https://www.a6no1.cn/"
 PERSON_URL = "https://metaver.vip/"
 
@@ -26,6 +26,7 @@ class Meta(HTMLParser):
         self.description = ""
         self.canonical = []
         self.og = {}
+        self.twitter = {}
         self.jsonld = []
         self.reading_jsonld = False
 
@@ -42,6 +43,8 @@ class Meta(HTMLParser):
                 self.description = attrs.get("content", "")
             if attrs.get("property", "").startswith("og:"):
                 self.og[attrs["property"]] = attrs.get("content", "")
+            if attrs.get("name", "").startswith("twitter:"):
+                self.twitter[attrs["name"]] = attrs.get("content", "")
         if tag == "script" and attrs.get("type") == "application/ld+json":
             self.reading_jsonld = True
             self.jsonld.append("")
@@ -82,6 +85,15 @@ def main():
             errors.append(f"{path}: OG URL does not match canonical")
         if meta.og.get("og:title") != meta.title:
             errors.append(f"{path}: OG title differs from HTML title")
+        image = BASE + "assets/social-preview.png"
+        if meta.og.get("og:image") != image:
+            errors.append(f"{path}: missing or incorrect og:image")
+        if meta.og.get("og:image:width") != "1280" or meta.og.get("og:image:height") != "640":
+            errors.append(f"{path}: missing og:image dimensions")
+        if meta.twitter.get("twitter:card") != "summary_large_image":
+            errors.append(f"{path}: twitter:card must be summary_large_image")
+        if meta.twitter.get("twitter:image") != image:
+            errors.append(f"{path}: missing or incorrect twitter:image")
         if len(meta.jsonld) != 1:
             errors.append(f"{path}: expected one JSON-LD object")
             continue

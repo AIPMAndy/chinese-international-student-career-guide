@@ -183,5 +183,5 @@ gh release create v1.0.0 \
 
 ## 作者
 
-AI 酋长 Andy ｜ 微信：AIPMAndy ｜ 公众号：AI酋长Andy  
+AI酋长Andy ｜ 微信：AIPMAndy ｜ 公众号：AI酋长Andy  
 个人官网：<https://metaver.vip/> ｜ 公司官网：<https://www.a6no1.cn/>
