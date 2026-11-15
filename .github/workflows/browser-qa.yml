@@ -1,0 +1,48 @@
+name: Browser usability and PDF download regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/browser-qa.yml'
+      - 'scripts/browser_smoke.mjs'
+      - 'scripts/build_site.py'
+      - 'website/**'
+      - 'content/**'
+      - 'data/**'
+      - 'templates/**'
+      - 'downloads/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  chromium-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild current source (not stale dist)
+        run: |
+          python3 scripts/package_release.py
+          python3 scripts/build_site.py --base-url https://aipmandy.github.io/chinese-international-student-career-guide/ --repo-url https://github.com/AIPMAndy/chinese-international-student-career-guide
+          python3 scripts/check_seo.py
+          python3 scripts/check_pages_links.py --require downloads/chinese-international-student-career-guide.pdf --require downloads/source-code.zip --require downloads/editable-templates.zip --require templates/career-workbook.xlsx
+      - name: Install pinned Chromium test runtime
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Run interactive checks across 3 viewports
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist >/tmp/career-browser-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill $server_pid' EXIT
+          sleep 2
+          SITE_URL=http://127.0.0.1:8765/ node scripts/browser_smoke.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: career-guide-browser-screenshots
+          path: qa/browser/
+          if-no-files-found: ignore
