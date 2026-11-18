@@ -172,7 +172,7 @@ def build(base_url='',repo_url=''):
     def footer():
         repo=f'<a href="{E(repo_url,quote=True)}">GitHub 开源仓库</a>' if repo_url else '<span>GitHub 发布状态见交付说明</span>'
         return '<footer class="footer"><div>© 2026 AI酋长Andy · '+VERSION+'</div><div class="footer-links"><a href="coverage.html">覆盖范围与缺口</a><a href="downloads.html">源文件与模板</a>'+repo+'<a href="https://metaver.vip/services">咨询与陪跑</a><a href="https://metaver.vip/">个人官网</a><a href="https://www.a6no1.cn/">公司官网</a><a href="index.html#about">关于作者</a></div></footer>'
-    def save(url,title,body,description='',article=False):
+    def save(url,title,body,description='',article=False,citations=None):
         # SEO and JSON-LD are derived from the same source as the rendered page.
         description = description or '面向中国留学生的跨地区求职路线、招聘窗口、资格核验、申请材料与可编辑模板。'
         site_root = base_url.rstrip('/') + '/' if base_url else ''
@@ -208,6 +208,8 @@ def build(base_url='',repo_url=''):
                 'author': {'@type': 'Person', 'name': 'AI酋长Andy', 'url': 'https://metaver.vip/'},
                 'publisher': {'@type': 'Organization', 'name': '星觉科技', 'url': 'https://www.a6no1.cn/'}
             }
+            if citations:
+                schema['citation'] = list(dict.fromkeys(citations))
             structured = '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
         doc = (
             '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
@@ -286,11 +288,22 @@ def build(base_url='',repo_url=''):
         page=pathmap.get(f.resolve());label=next((t['title'] for t in templatepages if t['file']==f),f.name)
         resources.append('<div class="resource-item"><div><strong>'+E(label)+'</strong><small>'+E(f.name)+'</small></div><div>'+('<a href="'+page+'">在线阅读</a> · ' if page else '')+'<a href="templates/'+E(f.name,quote=True)+'" download>下载</a></div></div>')
     body='<div class="wrap">'+heading('免费资源与下载','下载后保留私人副本，再填写自己的求职信息。工作簿带公式与下拉，CSV 和 Markdown 便于迁移和编辑。','DOWNLOADS')+'<section class="section">'+downloads_cards+'<div class="actions" style="margin-top:28px">'+dl('editable-templates.zip','下载完整模板包','button dark')+dl('source-code.zip','下载项目源文件','button soft')+'</div></section><section class="section"><div class="section-heading"><h2>单独下载每个工具</h2></div><div class="resource-list">'+''.join(resources)+'</div><p class="source-note">CSV 不保留公式、下拉和格式；请用工作簿计算，或自行建立公式。公开模板为空白，个人证件、合同与他人联系方式不应上传到公共仓库。</p></section></div>';save('downloads.html','免费资源与下载',body)
-    body='<div class="wrap">'+heading('来源与核验记录','优先政府、学校与雇主官方页面。来源条目说明它支持什么；页面可访问不等于个人符合资格。申请前应再次核对现行条件。','SOURCES')+'<div class="sources-list">'
+    # Source records are historical evidence; no dates or verification states are altered here.
+    partial_count = sum(s.get('status') != 'verified' for s in sources)
+    last_checked = max((str(s.get('checked_at')) for s in sources if s.get('checked_at')), default='未记录')
+    body='<div class="wrap">'+heading('来源与核验记录','优先政府、学校与雇主官方页面。核验日期是历史记录，不代表今天已重新打开；申请前请确认当前批次和个人资格。','SOURCES')
+    body+='<section class="source-workbench" aria-label="来源检索与复核"><div class="source-workbench-head"><div><div class="kicker">EVIDENCE WORKBENCH</div><h2>快速找到需要核实的证据</h2><p>共 '+str(len(sources))+' 条来源，其中 '+str(partial_count)+' 条尚非完整核验；台账最近记录日期 '+E(last_checked)+'。状态只说明记录深度，不能证明今天仍有效。</p></div><a href="coverage.html">查看未覆盖地区 →</a></div><div class="source-controls"><label class="source-search">搜索来源<input type="search" data-source-query placeholder="机构 / 地区 / 关键词 / 编号" autocomplete="off"></label><label class="source-filter">复核范围<select data-source-filter><option value="all">全部来源</option><option value="review">仅看需复核（含过期记录）</option><option value="partial">仅看部分核验</option></select></label><button type="button" data-source-reset>清空筛选</button><button type="button" data-source-export>导出当前复核清单 TXT</button></div><p class="source-counter" data-source-count role="status" aria-live="polite">正在加载来源台账</p><p class="source-note">「需复核」包含未完整核验或距离记录日期超过 30 天的资料；只是复查优先级，不代表官方资料已经失效。搜索及下载仅在本机处理，不上传条件或结果。</p></section>'
+    body+='<div class="sources-list" data-sources-list>'
     for s in sources:
-        supports=s.get('supports','');supports='；'.join(supports) if isinstance(supports,list) else str(supports);url=s.get('url','');notes=s.get('notes','');notes='；'.join(notes) if isinstance(notes,list) else str(notes)
-        body+='<article class="source-card" id="'+E(str(s['id']),quote=True)+'"><span class="source-id">'+E(str(s['id']))+' · '+E(str(s.get('region','')))+'</span><h2>'+E(s.get('title','官方来源'))+'</h2><p>发布机构：'+E(str(s.get('publisher','详见官方页面')))+'<br>核验日期：'+E(str(s.get('checked_at',VERSION)))+' · 状态：'+E(str(s.get('status','以核验备注为准')))+'</p><p>'+E(supports)+'</p>'+('<p>'+E(notes)+'</p>' if notes else '')+'<a href="'+E(safe_url(url),quote=True)+'">打开官方原文 ↗</a><span class="source-domain">'+E(urlsplit(url).netloc)+'</span></article>'
-    body+='</div></div>';save('sources.html','来源与核验记录',body)
+        supports=s.get('supports','');supports='；'.join(supports) if isinstance(supports,list) else str(supports)
+        url=str(s.get('url') or '');notes=s.get('notes','');notes='；'.join(notes) if isinstance(notes,list) else str(notes)
+        checked=str(s.get('checked_at') or '未记录')
+        source_status=str(s.get('status') or 'unknown')
+        source_title=str(s.get('title') or '官方来源')
+        search_text=' '.join(str(s.get(k) or '') for k in ['id','region','title','publisher','supports','notes'])
+        body+='<article class="source-card" data-source data-search="'+E(search_text,quote=True)+'" data-source-status="'+E(source_status,quote=True)+'" data-source-date="'+E(checked,quote=True)+'" data-source-title="'+E(source_title,quote=True)+'" data-source-url="'+E(url,quote=True)+'" id="'+E(str(s['id']),quote=True)+'"><span class="source-id">'+E(str(s['id']))+' · '+E(str(s.get('region','')))+'</span><h2>'+E(source_title)+'</h2><p>发布机构：'+E(str(s.get('publisher','详见官方页面')))+'<br>记录核验日期：<time datetime="'+E(checked,quote=True)+'">'+E(checked)+'</time> · 核验深度：'+E(source_status)+'</p><p>'+E(supports)+'</p>'+('<p>'+E(notes)+'</p>' if notes else '')+'<a href="'+E(safe_url(url),quote=True)+'" rel="noopener noreferrer">打开官方原文 ↗</a><span class="source-domain">'+E(urlsplit(url).netloc)+'</span></article>'
+    body+='</div><p class="empty-filter" data-source-empty hidden>没有符合条件的来源。可以清空筛选查看全部记录。</p></div>'
+    save('sources.html','来源与核验记录',body,citations=[str(s.get('url')) for s in sources if str(s.get('url') or '').startswith('https://')])
     body='<div class="wrap">'+heading('覆盖范围与缺口','本版提供部分国家与地区的基础路线，未声称覆盖所有国家、学校或雇主。非洲、南美洲不在本项目范围。','COVERAGE')+'<section class="section"><div class="article"><p>已建立 '+str(region_article_count)+' 个地区路线页（含回国），其中 '+str(verified)+' 页标注为已核验基础路径；另有 '+str(pending_navigation_count)+' 个地区仅建立缺口导航，尚未核验当地规则。这个标签不等于完整政策审查或个人资格确认。来源、适用条件和核验日期应一起阅读。</p><div class="table-scroll" role="region" aria-label="地区覆盖与缺口" tabindex="0"><table><thead><tr><th>地区</th><th>本版状态</th><th>已核验范围</th><th>待补充或另查</th></tr></thead><tbody>'
     for p in regions:
         verified_text='；'.join(p['verified']) if isinstance(p['verified'],list) else str(p['verified']);gaps='；'.join(p['gaps']) if isinstance(p['gaps'],list) else str(p['gaps'])

@@ -5,7 +5,7 @@
  * Device viewports are browser emulations, NOT physical Safari/Android sign-off.
  */
 import assert from 'node:assert/strict';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
 
 const base = (process.env.SITE_URL || 'http://127.0.0.1:8765/').replace(/\/?$/, '/');
@@ -89,6 +89,43 @@ try {
     summary.push({ width, regionCards: total, european, copyAndFallback: 'passed', overflow: false });
     await context.close();
   }
+
+  // Source evidence search, partial-state review, export bytes and GEO citation.
+  const evidence = await browser.newContext({ acceptDownloads: true, viewport: { width: 390, height: 820 } });
+  const sourcePage = await evidence.newPage();
+  const sourceResponse = await sourcePage.goto(base + 'sources.html', { waitUntil: 'networkidle' });
+  assert.equal(sourceResponse.status(), 200);
+  const sourceTotal = await sourcePage.locator('[data-source]').count();
+  assert.ok(sourceTotal >= 80, 'Source ledger must retain complete evidence records');
+  assert.equal(await sourcePage.locator('[data-source]:visible').count(), sourceTotal);
+  assert.match(await sourcePage.locator('[data-source-count]').textContent(), /建议复核/);
+  assert.equal(await sourcePage.locator('script[type="application/ld+json"]').count(), 1);
+  const sourceSchema = JSON.parse(await sourcePage.locator('script[type="application/ld+json"]').textContent());
+  assert.ok(sourceSchema.citation.length >= 80, 'GEO citations must match visible sources');
+  await sourcePage.locator('[data-source-filter]').selectOption('partial');
+  const partial = await sourcePage.locator('[data-source]:visible').count();
+  assert.ok(partial > 0 && partial < sourceTotal, 'Incomplete evidence must be filterable');
+  const [download] = await Promise.all([
+    sourcePage.waitForEvent('download'),
+    sourcePage.locator('[data-source-export]').click(),
+  ]);
+  assert.equal(download.suggestedFilename(), 'career-source-review-list.txt');
+  const txt = await readFile(await download.path(), 'utf-8');
+  assert.match(txt, /历史核验日期/);
+  assert.match(txt, /https:\/\/metaver.vip\/services/);
+  assert.match(txt, /https:\/\/www.a6no1.cn\//);
+  assert.match(txt, /官方原文/);
+  await sourcePage.locator('[data-source-query]').fill('no-matching-evidence-000');
+  assert.equal(await sourcePage.locator('[data-source]:visible').count(), 0);
+  assert.equal(await sourcePage.locator('[data-source-empty]').isVisible(), true);
+  await sourcePage.locator('[data-source-reset]').click();
+  assert.equal(await sourcePage.locator('[data-source-query]').inputValue(), '');
+  assert.equal(await sourcePage.locator('[data-source]:visible').count(), sourceTotal);
+  assert.equal(await sourcePage.locator('[data-source-empty]').isHidden(), true);
+  const sourceOverflow = await sourcePage.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1);
+  assert.equal(sourceOverflow, false, 'Source dashboard must not overflow on mobile');
+  await sourcePage.screenshot({ path: 'qa/browser/sources-390.png', fullPage: true });
+  await evidence.close();
 
   const r = await browser.newPage();
   const file = await r.request.get(base + 'downloads/chinese-international-student-career-guide.pdf');
