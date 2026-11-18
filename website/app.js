@@ -45,6 +45,68 @@
     query?.focus();
   });
   if (cards.length) filter();
+  // Historical source review: dynamic freshness priority is not a live policy check.
+  const sourceCards = [...document.querySelectorAll('[data-source]')];
+  const sourceQuery = document.querySelector('[data-source-query]');
+  const sourceMode = document.querySelector('[data-source-filter]');
+  const requiresReview = card => {
+    if (card.dataset.sourceStatus !== 'verified') return true;
+    const value = card.dataset.sourceDate || '';
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return true;
+    const date = Date.parse(value + 'T00:00:00Z');
+    return !Number.isFinite(date) || Date.now() - date > 30 * 86400000;
+  };
+  const filterSources = () => {
+    if (!sourceCards.length) return [];
+    const q = (sourceQuery?.value || '').trim().toLocaleLowerCase();
+    const mode = sourceMode?.value || 'all';
+    const visible = sourceCards.filter(card => {
+      const match = (!q || (card.dataset.search || '').toLocaleLowerCase().includes(q))
+        && (mode === 'all' || (mode === 'partial' ? card.dataset.sourceStatus !== 'verified' : requiresReview(card)));
+      card.hidden = !match;
+      return match;
+    });
+    const count = document.querySelector('[data-source-count]');
+    if (count) count.textContent = '当前显示 ' + visible.length + ' / ' + sourceCards.length + ' 条；其中 ' + visible.filter(requiresReview).length + ' 条建议复核。';
+    const empty = document.querySelector('[data-source-empty]');
+    if (empty) empty.hidden = visible.length > 0;
+    return visible;
+  };
+  [sourceQuery, sourceMode].forEach(input => input?.addEventListener('input', filterSources));
+  document.querySelector('[data-source-reset]')?.addEventListener('click', () => {
+    if (sourceQuery) sourceQuery.value = '';
+    if (sourceMode) sourceMode.value = 'all';
+    filterSources();
+    sourceQuery?.focus();
+  });
+  document.querySelector('[data-source-export]')?.addEventListener('click', () => {
+    const visible = filterSources();
+    const lines = [
+      '中国留学生求职：来源复核清单（历史台账，非最新规则认证）',
+      '生成日期：' + new Date().toISOString().slice(0, 10),
+      '导出条数：' + visible.length,
+      '注意：以官网最新岗位/官方资格原文为准；不得据此推断申请一定成功。',
+      '微信：AIPMAndy  个人官网：https://metaver.vip/  公司官网：https://www.a6no1.cn/  服务：https://metaver.vip/services',
+      '',
+      ...visible.flatMap(card => [
+        card.id + ' | ' + (card.dataset.sourceTitle || ''),
+        '历史核验日期：' + (card.dataset.sourceDate || '未记录') + ' | 状态：' + (card.dataset.sourceStatus || '未知'),
+        '官方原文：' + (card.dataset.sourceUrl || '未记录'),
+        '复核：□ 页面可访问 □ 适用年份/地区 □ 资格 □ 当前职位状态 □ 更新记录日期',
+        '',
+      ]),
+    ];
+    const blob = new Blob(['\uFEFF' + lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'career-source-review-list.txt';
+    document.body.append(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+  if (sourceCards.length) filterSources();
   document.querySelectorAll('[data-copy-wechat]').forEach(button => button.addEventListener('click', async () => {
     const target = document.querySelector('[data-copy-status]');
     try {
