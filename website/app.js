@@ -3,16 +3,32 @@
   if (readerMenu && window.matchMedia('(min-width: 761px)').matches) readerMenu.open = true;
   const menu = document.querySelector('[data-menu]');
   const nav = document.querySelector('.nav');
-  menu?.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    menu.setAttribute('aria-expanded', String(open));
-    menu.textContent = open ? '关闭' : '导航';
-  });
-  nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menu?.setAttribute('aria-expanded', 'false');
-    if (menu) menu.textContent = '导航';
-  }));
+  if (menu && nav) {
+    const mobile = window.matchMedia('(max-width: 760px)');
+    const setMenu = (open, restoreFocus = false) => {
+      nav.classList.toggle('open', open);
+      menu.setAttribute('aria-expanded', String(open));
+      menu.textContent = open ? '关闭' : '导航';
+      if (restoreFocus && mobile.matches) menu.focus();
+    };
+    menu.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && mobile.matches && nav.classList.contains('open')
+          && (event.target === menu || nav.contains(event.target))) {
+        event.preventDefault();
+        setMenu(false, true);
+      }
+    });
+    document.addEventListener('focusin', event => {
+      if (mobile.matches && nav.classList.contains('open') && event.target !== menu
+          && !nav.contains(event.target)) setMenu(false);
+    });
+    mobile.addEventListener('change', () => {
+      const wasFocused = nav.contains(document.activeElement);
+      setMenu(false, wasFocused);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  }
   const query = document.querySelector('[data-region-query]');
   const group = document.querySelector('[data-region-group]');
   const status = document.querySelector('[data-region-status]');
@@ -49,12 +65,15 @@
   const sourceCards = [...document.querySelectorAll('[data-source]')];
   const sourceQuery = document.querySelector('[data-source-query]');
   const sourceMode = document.querySelector('[data-source-filter]');
+  const sourceExport = document.querySelector('[data-source-export]');
   const requiresReview = card => {
     if (card.dataset.sourceStatus !== 'verified') return true;
     const value = card.dataset.sourceDate || '';
     if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return true;
     const date = Date.parse(value + 'T00:00:00Z');
-    return !Number.isFinite(date) || Date.now() - date > 30 * 86400000;
+    const now = Date.now();
+    return !Number.isFinite(date) || new Date(date).toISOString().slice(0, 10) !== value
+      || date > now || now - date > 30 * 86400000;
   };
   const filterSources = () => {
     if (!sourceCards.length) return [];
@@ -70,6 +89,7 @@
     if (count) count.textContent = '当前显示 ' + visible.length + ' / ' + sourceCards.length + ' 条；其中 ' + visible.filter(requiresReview).length + ' 条建议复核。';
     const empty = document.querySelector('[data-source-empty]');
     if (empty) empty.hidden = visible.length > 0;
+    if (sourceExport) sourceExport.disabled = visible.length === 0;
     return visible;
   };
   [sourceQuery, sourceMode].forEach(input => input?.addEventListener('input', filterSources));
@@ -79,8 +99,9 @@
     filterSources();
     sourceQuery?.focus();
   });
-  document.querySelector('[data-source-export]')?.addEventListener('click', () => {
+  sourceExport?.addEventListener('click', () => {
     const visible = filterSources();
+    if (!visible.length) return;
     const lines = [
       '中国留学生求职：来源复核清单（历史台账，非最新规则认证）',
       '生成日期：' + new Date().toISOString().slice(0, 10),
