@@ -18,6 +18,7 @@ try {
       viewport: { width, height: 820 },
       deviceScaleFactor: 1,
       locale: 'zh-CN',
+      reducedMotion: width === 360 ? 'reduce' : 'no-preference',
     });
     const page = await context.newPage();
     const errors = [];
@@ -25,6 +26,7 @@ try {
     const response = await page.goto(base, { waitUntil: 'networkidle' });
     assert.equal(response.status(), 200, 'Homepage must respond HTTP 200');
     assert.equal(await page.locator('h1').count(), 1, 'Exactly one H1');
+    if (width === 360) assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), 'auto');
     assert.equal(await page.locator('[data-copy-wechat]').count() > 0, true);
     assert.equal(await page.locator('[data-region-reset]').count(), 1);
 
@@ -52,8 +54,18 @@ try {
     if (width <= 760) {
       const menu = page.locator('[data-menu]');
       assert.equal(await menu.isVisible(), true, 'Mobile navigation must be visible');
-      await menu.click();
+      await menu.focus();
+      await page.keyboard.press('Enter');
       assert.equal(await menu.getAttribute('aria-expanded'), 'true');
+      await page.keyboard.press('Tab');
+      assert.equal(await page.locator('#main-nav a').first().evaluate(el => el === document.activeElement), true);
+      await page.keyboard.press('Escape');
+      assert.equal(await menu.getAttribute('aria-expanded'), 'false');
+      assert.equal(await menu.evaluate(el => el === document.activeElement), true);
+      await menu.click();
+      await page.locator('[data-region-query]').focus();
+      assert.equal(await menu.getAttribute('aria-expanded'), 'false');
+      await menu.click();
       await page.locator('#main-nav a').first().click();
       assert.equal(await menu.getAttribute('aria-expanded'), 'false');
     }
@@ -115,10 +127,26 @@ try {
   assert.match(txt, /https:\/\/metaver.vip\/services/);
   assert.match(txt, /https:\/\/www.a6no1.cn\//);
   assert.match(txt, /官方原文/);
+  // Test malformed/future verification dates without changing real source records.
+  const sample = sourcePage.locator('[data-source][data-source-status="verified"]').first();
+  assert.ok(await sample.count());
+  const originalDate = await sample.getAttribute('data-source-date');
+  await sourcePage.locator('[data-source-filter]').selectOption('review');
+  for (const date of ['9999-01-01', '2026-02-30', 'not-a-date']) {
+    await sample.evaluate((el, value) => { el.dataset.sourceDate = value; }, date);
+    await sourcePage.locator('[data-source-query]').dispatchEvent('input');
+    assert.equal(await sample.isVisible(), true, 'Invalid/future verification date must be reviewed: ' + date);
+  }
+  await sample.evaluate(el => { el.dataset.sourceDate = new Date().toISOString().slice(0, 10); });
+  await sourcePage.locator('[data-source-query]').dispatchEvent('input');
+  assert.equal(await sample.isHidden(), true, 'Fresh verified record should not be flagged');
+  await sample.evaluate((el, value) => { el.dataset.sourceDate = value; }, originalDate);
   await sourcePage.locator('[data-source-query]').fill('no-matching-evidence-000');
   assert.equal(await sourcePage.locator('[data-source]:visible').count(), 0);
   assert.equal(await sourcePage.locator('[data-source-empty]').isVisible(), true);
+  assert.equal(await sourcePage.locator('[data-source-export]').isDisabled(), true);
   await sourcePage.locator('[data-source-reset]').click();
+  assert.equal(await sourcePage.locator('[data-source-export]').isEnabled(), true);
   assert.equal(await sourcePage.locator('[data-source-query]').inputValue(), '');
   assert.equal(await sourcePage.locator('[data-source]:visible').count(), sourceTotal);
   assert.equal(await sourcePage.locator('[data-source-empty]').isHidden(), true);
