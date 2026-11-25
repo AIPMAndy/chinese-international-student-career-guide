@@ -18,6 +18,7 @@
 .source-controls input,.source-controls select,.source-controls button{border:1px solid #a2a29c;background:#fff;color:#242424;border-radius:0;min-height:46px;padding:10px 13px;font:inherit;font-size:13px}
 .source-controls button{cursor:pointer;font-weight:600}
 .source-controls button[data-source-export]{background:#222;color:#fff;border-color:#222}
+.source-controls button[data-source-export]:disabled{background:#e5e5e0;color:#666;border-color:#aaa;cursor:not-allowed}
 .source-controls input:focus-visible,.source-controls select:focus-visible,.source-controls button:focus-visible{outline:3px solid #1f63bc;outline-offset:2px}
 .source-counter{font-size:13px;font-weight:650;color:#222;margin:18px 0 7px}
 .source-workbench .source-note{margin:0}
