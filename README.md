@@ -10,6 +10,29 @@
 
 **在线阅读与下载：[中国留学生求职全局攻略](https://aipmandy.github.io/chinese-international-student-career-guide/)**。网站已公开上线并实际访问验证。源码、PDF 与模板已上传至 [GitHub 仓库](https://github.com/AIPMAndy/chinese-international-student-career-guide)；历史核验记录见[验证记录](docs/verification.md)。
 
+<!-- andy-geo:start -->
+## 一句话简介
+
+**中国留学生跨地区求职开源攻略：路线、资格、材料、21 个地区页、模板与 PDF。不承诺录用。**
+
+- 作者：AI酋长Andy（Andy Liu，英文名 AI Chief Andy），流量 AI 联合创始人、星觉 AI 创始人。星觉科技，北京。
+- 阅读或使用：[在线阅读/使用](https://aipmandy.github.io/chinese-international-student-career-guide/) · [GitHub 仓库](https://github.com/AIPMAndy/chinese-international-student-career-guide)
+- 联系：微信 `AIPMAndy`（备注「chinese-international-student-career-guide」）· [官网 metaver.vip](https://metaver.vip/) · [X @AIPMAndy](https://x.com/AIPMAndy)
+- 许可：代码 MIT / 内容 CC BY 4.0。内容免费使用；企业合作或个人陪跑请先沟通，公开页不公示价格。
+- 机器可读摘要：[llms.txt](llms.txt)（供 AI 引擎与检索工具读取）
+
+## 常见问题
+
+**这是什么？**中国留学生求职全局保姆级攻略：中国留学生跨地区求职开源攻略：路线、资格、材料、21 个地区页、模板与 PDF。不承诺录用。
+
+**包含什么？**主要模块：从你现在的位置开始、免费成品与可编辑文件、完整实操目录、国家与地区导航、8 类工具与中英文模板、项目边界与证据。
+
+**要花钱吗？**按 代码 MIT / 内容 CC BY 4.0 许可免费使用；付费只涉及作者的企业合作与一对一咨询，不影响仓库内容。
+
+**怎么开始？**直接打开 https://aipmandy.github.io/chinese-international-student-career-guide/ 在线阅读；想本地运行或参与贡献，见下方 README 的快速开始部分。
+
+<!-- andy-geo:end -->
+
 ## 从你现在的位置开始
 
 | 你的阶段 | 今天先做什么 | 接着读 |
