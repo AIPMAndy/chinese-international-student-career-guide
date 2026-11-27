@@ -1,0 +1,86 @@
+# 中国留学生求职全局保姆级攻略
+
+> 中国留学生跨地区求职开源攻略：路线、资格、材料、21 个地区页、模板与 PDF。不承诺录用。
+
+- 作者：AI酋长Andy（AIPMAndy），官网 https://metaver.vip/
+- 开源仓库：https://github.com/AIPMAndy/chinese-international-student-career-guide
+- 在线地址：https://aipmandy.github.io/chinese-international-student-career-guide/
+- 许可：代码 MIT / 内容 CC BY 4.0
+- 语言：中文（zh-CN）
+- 最近更新：2026-11-25
+
+## 这是什么
+
+面向在读、即将毕业、已经毕业，以及准备回国或已经回国的中国留学生。按具体国家或地区核验工作资格、招聘窗口、学校资源和申请习惯，再把路线选择落实到材料、投递、面试和 Offer 比较。
+作者：AI酋长Andy ｜ 版本：v1.0.0 ｜ 本版核验日期：2026-11-13
+
+## 主要页面
+
+- [完整攻略目录 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/contents.html)
+- [覆盖范围与缺口 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/coverage.html)
+- [免费资源与下载 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/downloads.html)
+- [从你现在的位置开始 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-00-start.html)
+- [留当地、去第三地，还是回国 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-01-routes.html)
+- [把四个时钟放进一张时间表 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-02-calendar.html)
+- [逐行读招聘原文，先过资格关 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-03-eligibility.html)
+- [选岗位：从能力证据到目标清单 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-04-target-role.html)
+- [用好学校、校友、官网与招聘活动 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-05-resources.html)
+- [中英文材料：一套事实，多种表达 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-06-materials.html)
+- [投递、跟进与卡点诊断 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-07-application.html)
+- [面试：把经历讲清，把条件问清 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-08-interview.html)
+- [比较 Offer：先可入职，再比较价值 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-09-offer.html)
+- [四类常见障碍，逐个拆解 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-10-obstacles.html)
+- [回国衔接：招聘、学历材料与到岗 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-11-return-china.html)
+- [AI辅助：整理、练习、检查 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-12-ai.html)
+- [30天行动计划与验收 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-13-action-plan.html)
+- [怎样使用来源、更新与咨询 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-14-method-and-contact.html)
+- [地区覆盖缺口与补充方法 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/guide-15-coverage-gaps.html)
+- [中国留学生求职全局保姆级攻略 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/)
+- [阿联酋 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-ae.html)
+- [澳大利亚 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-au.html)
+- [加拿大 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-ca.html)
+- [瑞士 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-ch.html)
+- [德国 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-de.html)
+- [芬兰 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-fi.html)
+- [法国 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-fr.html)
+- [香港 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-hk.html)
+- [爱尔兰 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-ie.html)
+- [日本 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-jp.html)
+- [韩国 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-kr.html)
+- [澳门 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-mo.html)
+- [马来西亚 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-my.html)
+- [荷兰 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-nl.html)
+- [新西兰 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-nz.html)
+- [瑞典 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-se.html)
+- [新加坡 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-sg.html)
+- [台湾 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-tw.html)
+- [英国 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-uk.html)
+- [美国 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/region-us.html)
+
+## 内容目录
+
+- 从你现在的位置开始
+- 免费成品与可编辑文件
+- 完整实操目录
+- 国家与地区导航
+- 8 类工具与中英文模板
+- 项目边界与证据
+- 本地阅读、构建与贡献
+- 作者与咨询
+- 许可证
+
+## 关键事实
+
+- 名称：中国留学生求职全局保姆级攻略
+- 类型：中文开源项目
+- 许可：代码 MIT / 内容 CC BY 4.0
+- 语言：中文
+- 最近更新：2026-11-25
+- 仓库：https://github.com/AIPMAndy/chinese-international-student-career-guide
+
+## 相关链接
+
+- [作者官网](https://metaver.vip/)
+- [GitHub 主页](https://github.com/AIPMAndy/AIPMAndy)
+- [开源总目录](https://aipmandy.github.io/)
+- [机器可读摘要](https://aipmandy.github.io/chinese-international-student-career-guide/llms.txt)
