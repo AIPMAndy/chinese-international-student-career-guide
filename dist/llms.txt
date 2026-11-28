@@ -16,6 +16,9 @@
 
 ## 主要页面
 
+- [来源与核验记录](https://aipmandy.github.io/chinese-international-student-career-guide/sources.html): 历史核验日期和来源原文，申请前需重新确认资格。
+- [免费 PDF](https://aipmandy.github.io/chinese-international-student-career-guide/downloads/chinese-international-student-career-guide.pdf): 与教程同版的离线读本。
+
 - [完整攻略目录 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/contents.html)
 - [覆盖范围与缺口 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/coverage.html)
 - [免费资源与下载 | AI酋长Andy](https://aipmandy.github.io/chinese-international-student-career-guide/downloads.html)
@@ -81,6 +84,9 @@
 ## 相关链接
 
 - [作者官网](https://metaver.vip/)
+- [公司官网](https://www.a6no1.cn/)
+- [咨询与陪跑](https://metaver.vip/services)
+- 微信：AIPMAndy
 - [GitHub 主页](https://github.com/AIPMAndy/AIPMAndy)
 - [开源总目录](https://aipmandy.github.io/)
 - [机器可读摘要](https://aipmandy.github.io/chinese-international-student-career-guide/llms.txt)

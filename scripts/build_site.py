@@ -122,6 +122,9 @@ def read_json_lists(pattern):
 
 def build(base_url='',repo_url=''):
     OUT.mkdir(exist_ok=True);(OUT/'assets').mkdir(exist_ok=True)
+    # Root llms.txt is the authoritative curated machine-readable index.
+    # Always publish it from source, including when dist starts empty.
+    shutil.copyfile(ROOT/'llms.txt', OUT/'llms.txt')
     shutil.copyfile(ROOT/'website/style.css',OUT/'assets/style.css');shutil.copyfile(ROOT/'website/app.js',OUT/'assets/app.js')
     social_src = ROOT / 'assets' / 'social-preview.png'
     if social_src.is_file():
