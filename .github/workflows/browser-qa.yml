@@ -6,6 +6,11 @@ on:
       - '.github/workflows/browser-qa.yml'
       - 'scripts/browser_smoke.mjs'
       - 'scripts/build_site.py'
+      - 'scripts/check_seo.py'
+      - 'scripts/check_pages_links.py'
+      - 'scripts/package_release.py'
+      - 'llms.txt'
+      - 'dist/**'
       - 'website/**'
       - 'content/**'
       - 'data/**'
@@ -27,6 +32,8 @@ jobs:
           node-version: '22'
       - name: Rebuild current source (not stale dist)
         run: |
+          # Exercise generation rather than accidentally passing on a committed copy.
+          rm -f dist/llms.txt
           python3 scripts/package_release.py
           python3 scripts/build_site.py --base-url https://aipmandy.github.io/chinese-international-student-career-guide/ --repo-url https://github.com/AIPMAndy/chinese-international-student-career-guide
           python3 scripts/check_seo.py

@@ -6,6 +6,7 @@ Source: scripts/build_site.py. No network requests or ranking guarantees.
 from html.parser import HTMLParser
 from pathlib import Path
 import json
+import re
 import sys
 import xml.etree.ElementTree as ET
 
@@ -123,6 +124,30 @@ def main():
             errors.append(f"sitemap.xml: expected {len(expected_urls)} published HTML URLs; got {len(set(locs))}")
     except (OSError, ET.ParseError) as exc:
         errors.append(f"robots/sitemap invalid: {exc}")
+
+    # Verify the curated machine-readable index against the actual build.
+    try:
+        source_llms = (ROOT / "llms.txt").read_bytes()
+        published_llms = (SITE / "llms.txt").read_bytes()
+        if published_llms != source_llms:
+            errors.append("llms.txt: generated copy differs from authoritative root")
+        index = published_llms.decode("utf-8")
+        links = set(re.findall(r"\]\((https://[^)]+)\)", index))
+        for target in (BASE, BASE + "sources.html", BASE + "downloads/chinese-international-student-career-guide.pdf", PERSON_URL, BRAND_URL, "https://metaver.vip/services"):
+            if target not in links:
+                errors.append(f"llms.txt: missing navigation target {target}")
+        if "AIPMAndy" not in index:
+            errors.append("llms.txt: missing author contact")
+        for link in links:
+            if not link.startswith(BASE):
+                continue
+            rel = link[len(BASE):] or "index.html"
+            if not (SITE / rel).is_file():
+                errors.append(f"llms.txt: missing local target {rel}")
+            if rel.endswith(".html") and link not in expected_urls:
+                errors.append(f"llms.txt: HTML target absent from sitemap {link}")
+    except (OSError, UnicodeError) as exc:
+        errors.append(f"llms.txt: unavailable or invalid: {exc}")
 
     homepage = (SITE / "index.html").read_text("utf-8")
     for value in ("AIPMAndy", PERSON_URL, BRAND_URL, "https://metaver.vip/services", "data-copy-wechat"):

@@ -2,7 +2,7 @@ name: Deploy verified handbook to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['dist/**', '.github/workflows/pages.yml', 'scripts/build_site.py', 'scripts/package_release.py', 'scripts/check_seo.py', 'scripts/check_pages_links.py', 'website/**', 'content/**', 'data/**', 'templates/**', 'downloads/**', 'README.md', 'DEPLOYMENT.md', 'PUBLISH.md', 'AGENTS.md']
+    paths: ['dist/**', 'llms.txt', '.github/workflows/pages.yml', 'scripts/build_site.py', 'scripts/package_release.py', 'scripts/check_seo.py', 'scripts/check_pages_links.py', 'website/**', 'content/**', 'data/**', 'templates/**', 'downloads/**', 'README.md', 'DEPLOYMENT.md', 'PUBLISH.md', 'AGENTS.md']
   workflow_dispatch:
 permissions:
   contents: read
@@ -54,7 +54,7 @@ jobs:
           from urllib.request import Request, urlopen
 
           base = os.environ['LIVE_URL'].rstrip('/') + '/'
-          paths = ["index.html","guide-00-start.html","sources.html","sitemap.xml","robots.txt","assets/style.css","assets/app.js","downloads/chinese-international-student-career-guide.pdf","templates/career-workbook.xlsx","downloads/editable-templates.zip","downloads/source-code.zip"]
+          paths = ["index.html","guide-00-start.html","sources.html","sitemap.xml","robots.txt","llms.txt","assets/style.css","assets/app.js","downloads/chinese-international-student-career-guide.pdf","templates/career-workbook.xlsx","downloads/editable-templates.zip","downloads/source-code.zip"]
           for path in paths:
               expected = (Path('dist') / path).read_bytes()
               expected_hash = hashlib.sha256(expected).hexdigest()
